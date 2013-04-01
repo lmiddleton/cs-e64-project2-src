@@ -15,7 +15,45 @@
 </head>
 
 <body>
-	This is project 2.
+	<div id="description">
+		Number of firearm homicides relative to population in the US 2006-2011 by state. Filter by year and age of victim. Tooltip will show state name, current year selected, state population for that year, number of homicides in that state in that year, breakdown of victim ages in that state in that year (if an age is selected). Changing a filter on the right will trigger a redraw of the map for that specific data.
+	</div>
+
+	<div id="map1"></div>
+
+	<div id="control-panel">
+		<select id="year">
+			<option>Year</option>
+			<option>2006</option>
+			<option>2007</option>
+			<option>2008</option>
+			<option>2009</option>
+			<option>2010</option>
+			<option>2011</option>
+		</select>
+		<br />
+		<select id="age">
+			<option>Age</option>
+			<option>Infant (under 1 year)</option>
+			<option>1-4 years</option>
+			<option>5-8 years</option>
+			<option>9-12 years</option>
+			<option>13-16 years</option>
+			<option>17-19 years</option>
+			<option>etc.</option>
+		</select>
+		<div id="key">
+			<div class="color-key" id="color-key1"></div><span class="key-text">Category 1</span>
+			<br />
+			<div class="color-key" id="color-key2"></div><span class="key-text">Category 2</span>
+			<br />
+			<div class="color-key" id="color-key3"></div><span class="key-text">Category 3</span>
+			<br />
+			<div class="color-key" id="color-key4"></div><span class="key-text">Category 4</span>
+			<br />
+			<div class="color-key" id="color-key5"></div><span class="key-text">Category 5</span>
+		</div>
+	</div>
 </body>
 
 </html>
