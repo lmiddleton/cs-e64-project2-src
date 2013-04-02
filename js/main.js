@@ -1,27 +1,5 @@
 /*Project 2 functions*/
 
-window.onload = function() {
-	//init map 1
-	var map = $('#map1').datamap({
-		scope: 'usa',
-		fills: {
-			'TEST1': '#000000',
-			'TEST2': '#FFFFFF',
-			defaultFill: '#EFEFEF'
-		},
-		//data: parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv")
-	});
-
-	map.render();
-
-	parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv");
-	map.options.data = byState2006;
-	map.render();
-
-	//for testing
-	alert("javascript is working.");
-}
-
 var stateAbbr = [
 	["Alabama", "AL"],
 	["Alaska", "AK"],
@@ -80,8 +58,9 @@ var byState2006 = {};
 function parseCsv(filepath) {
 	//csv test
 	d3.csv(filepath, function(csv){
-		for (i=0; i<csv.length; i++) {
-			var row = csv[i];
+		csv.forEach(function(c) { //for (i=0; i<csv.length; i++) {
+			var row = c;
+			//figure out what the values should be in variables here
 			var state = row.State;
 			for (var i=0; i < stateAbbr.length; i++){
 				var arrState = stateAbbr[i][0];
@@ -104,8 +83,40 @@ function parseCsv(filepath) {
 				fillKey: fill,
 				handguns: handguns
 			}
-		}
+		});
 		//return byState2006;
 		console.log(byState2006);
 	});
+}
+
+/********************************/
+
+window.onload = function() {
+	//init map 1
+	var map = $('#map1').datamap({
+		scope: 'usa',
+		fills: {
+			'TEST1': '#000000',
+			'TEST2': '#FFFFFF',
+			defaultFill: '#EFEFEF'
+		},
+		data: {
+			//parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv")
+		}
+	});
+
+	//map.render();
+
+	parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv");
+	map.options.data = byState2006;
+	//map.options.data = {
+	//	"AZ": {
+     //       "fillKey": "REP",
+    //        "electoralVotes": 5
+    //    },
+	//};
+	map.render();
+
+	//for testing
+	alert("javascript is working.");
 }
