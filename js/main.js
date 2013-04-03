@@ -119,4 +119,10 @@ window.onload = function() {
 
 	//for testing
 	alert("javascript is working.");
+	
+
+	$('#map1').click(function(event){
+	  alert(event.target.id);
+	});    
+
 }
