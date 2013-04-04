@@ -85,7 +85,7 @@ function parseCsv(filepath) {
 			}
 		});
 		//return byState2006;
-		console.log(byState2006);
+		//console.log(byState2006);
 	});
 }
 
@@ -93,19 +93,35 @@ function parseCsv(filepath) {
 
 window.onload = function() {
 	//init map 1
-	var map = $('#map1').datamap({
+	var map = new Map({
 		scope: 'usa',
+		el: $('#map1'),
+      	geography_config: { 
+        	highlightBorderColor: '#FFFF00',
+        	highlightOnHover: true,  // For reason I don't understand you don't reference by state
+        	popupTemplate: _.template('<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (JSON_data["AK"]["2006"]["Total murders1"]) { %><hr/>  Total Murders: <%= JSON_data["AK"]["2006"]["Total murders1"] %> <% } %></div>')
+      },
 		fills: {
 			'TEST1': '#000000',
 			'TEST2': '#FFFFFF',
 			defaultFill: '#EFEFEF'
 		},
-		data: {
-			//parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv")
-		}
+		data: JSON_data
 	});
 
-	//map.render();
+	//how to access data in JSON object
+	var test = JSON_data["AK"]["2006"]["Handguns"];
+	console.log(test);
+
+	//to then modify the object (aka change the fill)
+	JSON_data["AK"]["fillKey"] = "TEST1";
+	console.log(JSON_data);
+
+	//to change the popupTemplate (ex. for a different year)
+	//var template = map.geography_config;
+	//console.log(template);
+
+	map.render();
 
 	parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv");
 	map.options.data = byState2006;
@@ -115,7 +131,7 @@ window.onload = function() {
     //        "electoralVotes": 5
     //    },
 	//};
-	map.render();
+	//map.render();
 
 	//for testing
 	alert("javascript is working.");
