@@ -1,5 +1,6 @@
 /*Project 2 functions*/
 
+/*
 var stateAbbr = [
 	["Alabama", "AL"],
 	["Alaska", "AK"],
@@ -55,6 +56,8 @@ var stateAbbr = [
 
 var byState2006 = {};
 
+*/
+/*
 function parseCsv(filepath) {
 	//csv test
 	d3.csv(filepath, function(csv){
@@ -88,6 +91,28 @@ function parseCsv(filepath) {
 		//console.log(byState2006);
 	});
 }
+*/
+
+/*re-renders the map for the selected year*/
+function drawMapForYear(map, year, dataObject) {
+	for(state in dataObject) {
+		if (!dataObject.hasOwnProperty(state)){
+			continue;
+		}
+		var totalMurders = dataObject[state][year]["Total murders1"];
+		console.log(totalMurders);
+		if(totalMurders >= 50){
+			//one color
+			dataObject[state]["fillKey"] = "TEST1";
+		}
+		else {
+			//another color
+			dataObject[state]["fillKey"] = "TEST2";
+		}
+	}
+
+	map.render();
+}
 
 /********************************/
 
@@ -98,7 +123,7 @@ window.onload = function() {
 		el: $('#map1'),
       	geography_config: { 
         	highlightBorderColor: '#FFFF00',
-        	highlightOnHover: true,  // For reason I don't understand you don't reference by state
+        	highlightOnHover: true,  // For reason I don't understand you don't reference by state //It's just a temp hack, I couldn't get it to work w/o putting in something there, not sure why it's working in yours, maybe b/c you copied the JSON object right into data and I'm referencing a variable?
         	popupTemplate: _.template('<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (JSON_data["AK"]["2006"]["Total murders1"]) { %><hr/>  Total Murders: <%= JSON_data["AK"]["2006"]["Total murders1"] %> <% } %></div>')
       },
 		fills: {
@@ -113,34 +138,20 @@ window.onload = function() {
 	var test = JSON_data["AK"]["2006"]["Handguns"];
 	console.log(test);
 
-	for(state in JSON_data) {
-		if (!JSON_data.hasOwnProperty(state)){
-			continue;
-		}
-		var totalMurders = JSON_data[state]["2006"]["Total murders1"];
-		console.log(totalMurders);
-		if(totalMurders >= 50){
-			//one color
-			JSON_data[state]["fillKey"] = "TEST1";
-		}
-		else {
-			//another color
-			JSON_data[state]["fillKey"] = "TEST2";
-		}
-	}
+	drawMapForYear(map, "2006", JSON_data);
 
 	//to then modify the object (aka change the fill)
-	JSON_data["AK"]["fillKey"] = "TEST1";
-	console.log(JSON_data);
+	//JSON_data["AK"]["fillKey"] = "TEST1";
+	//console.log(JSON_data);
 
 	//to change the popupTemplate (ex. for a different year)
 	//var template = map.geography_config;
 	//console.log(template);
 
-	map.render();
+	
 
-	parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv");
-	map.options.data = byState2006;
+	//parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv");
+	//map.options.data = byState2006;
 	//map.options.data = {
 	//	"AZ": {
      //       "fillKey": "REP",
@@ -148,13 +159,13 @@ window.onload = function() {
     //    },
 	//};
 	//map.render();
-
-	//for testing
-	alert("javascript is working.");
 	
 
 	$('#map1').click(function(event){
 	  alert(event.target.id);
-	});    
+	});
+
+	//for testing
+	alert("javascript is working.");
 
 }
