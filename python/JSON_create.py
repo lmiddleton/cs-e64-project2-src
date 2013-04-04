@@ -21,6 +21,7 @@ data["ID"] = {"Name":"Idaho"}
 data["IL"] = {"Name":"Illinois"}
 data["IN"] = {"Name":"Indiana"}
 data["IA"] = {"Name":"Iowa"}
+data["KS"] = {"Name":"Kansas"}
 data["KY"] = {"Name":"Kentucky"}
 data["LA"] = {"Name":"Louisiana"}
 data["ME"] = {"Name":"Maine"}

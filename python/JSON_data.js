@@ -1106,6 +1106,84 @@ var JSON_data = {
         },
         "Name": "Indiana"
     },
+    "KS": {
+        "2006": {
+            "Firearms (type unknown)": "27.0",
+            "Handguns": "33.0",
+            "Hands, fists, feet, etc.2": "9.0",
+            "Knives or cutting instruments": "14.0",
+            "Other weapons": "33.0",
+            "Population": "2755700",
+            "Rifles": "6.0",
+            "Shotguns": "4.0",
+            "Total firearms": "70.0",
+            "Total murders1": "126.0"
+        },
+        "2007": {
+            "Firearms (type unknown)": "26.0",
+            "Handguns": "29.0",
+            "Hands, fists, feet, etc.2": "6.0",
+            "Knives or cutting instruments": "12.0",
+            "Other weapons": "23.0",
+            "Population": "2775586",
+            "Rifles": "5.0",
+            "Shotguns": "3.0",
+            "Total firearms": "63.0",
+            "Total murders1": "104.0"
+        },
+        "2008": {
+            "Firearms (type unknown)": "15.0",
+            "Handguns": "41.0",
+            "Hands, fists, feet, etc.2": "17.0",
+            "Knives or cutting instruments": "15.0",
+            "Other weapons": "17.0",
+            "Population": "2797375",
+            "Rifles": "2.0",
+            "Shotguns": "3.0",
+            "Total firearms": "61.0",
+            "Total murders1": "110.0"
+        },
+        "2009": {
+            "Firearms (type unknown)": "38.0",
+            "Handguns": "38.0",
+            "Hands, fists, feet, etc.2": "8.0",
+            "Knives or cutting instruments": "14.0",
+            "Other weapons": "11.0",
+            "Population": "2818747",
+            "Rifles": "9.0",
+            "Shotguns": "0.0",
+            "Total firearms": "85.0",
+            "Total murders1": "118.0"
+        },
+        "2010": {
+            "Firearms (type unknown)": "28.0",
+            "Handguns": "30.0",
+            "Hands, fists, feet, etc.2": "6.0",
+            "Knives or cutting instruments": "13.0",
+            "Other weapons": "18.0",
+            "Population": "Kansas",
+            "Rifles": "4.0",
+            "Shotguns": "1.0",
+            "Total firearms": "63.0",
+            "Total murders1": "100.0"
+        },
+        "2011": {
+            "Firearms\n(type\nunknown)": "34.0",
+            "Handguns": "31.0",
+            "Hands, fists,\nfeet, etc.2": "10.0",
+            "Knives or\ncutting\ninstruments": "11.0",
+            "Other\nweapons": "16.0",
+            "Population": "2853116",
+            "Rifles": "3.0",
+            "Shotguns": "5.0",
+            "Total\nfirearms": "73.0",
+            "Total\nmurders1": "110.0"
+        },
+        "2012": {
+            "Population": "2858837"
+        },
+        "Name": "Kansas"
+    },
     "KY": {
         "2006": {
             "Firearms (type unknown)": "6.0",
