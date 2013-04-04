@@ -113,6 +113,22 @@ window.onload = function() {
 	var test = JSON_data["AK"]["2006"]["Handguns"];
 	console.log(test);
 
+	for(state in JSON_data) {
+		if (!JSON_data.hasOwnProperty(state)){
+			continue;
+		}
+		var totalMurders = JSON_data[state]["2006"]["Total murders1"];
+		console.log(totalMurders);
+		if(totalMurders >= 50){
+			//one color
+			JSON_data[state]["fillKey"] = "TEST1";
+		}
+		else {
+			//another color
+			JSON_data[state]["fillKey"] = "TEST2";
+		}
+	}
+
 	//to then modify the object (aka change the fill)
 	JSON_data["AK"]["fillKey"] = "TEST1";
 	console.log(JSON_data);
