@@ -95,12 +95,13 @@ function parseCsv(filepath) {
 
 /*re-renders the map for the selected year*/
 function drawMapForYear(map, year, dataObject) {
+	console.log(year);
 	for(state in dataObject) {
 		if (!dataObject.hasOwnProperty(state)){
 			continue;
 		}
 		var totalMurders = dataObject[state][year]["Total murders1"];
-		console.log(totalMurders);
+		//console.log(totalMurders);
 		if(totalMurders >= 50){
 			//one color
 			dataObject[state]["fillKey"] = "TEST1";
@@ -112,6 +113,19 @@ function drawMapForYear(map, year, dataObject) {
 	}
 
 	map.render();
+	console.log("rendered!");
+}
+
+/*year dropdown handler*/
+function initYearSelect(map) {
+	$("#year").change(function() {
+		//find which year was selected
+		var year = this.value;
+		//redraw the map based on that year
+		drawMapForYear(map, year, JSON_data);
+
+		alert(year);
+	});
 }
 
 /********************************/
@@ -139,6 +153,8 @@ window.onload = function() {
 	console.log(test);
 
 	drawMapForYear(map, "2006", JSON_data);
+
+	initYearSelect(map);
 
 	//to then modify the object (aka change the fill)
 	//JSON_data["AK"]["fillKey"] = "TEST1";
