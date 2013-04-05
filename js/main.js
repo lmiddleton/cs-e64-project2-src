@@ -135,7 +135,7 @@ function drawMap(year, dataObject) {
 	}
 
 	//set up popup tmeplate
-	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Handguns"]) { %><hr/>  Total Handguns: <%= data[' + year + ']["Handguns"] %> <% } %><br/>Gun Murders Per 100K: <%= data[' + year + ']["Gun Murders Per 100K"] %></div>';
+	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Total murders1"]) { %><hr/>  Total Murders: <%= data[' + year + ']["Total murders1"] %> <% } %><br/>Total Firearm Murders: <%= data[' + year + ']["Total firearms"] %><br/>Population: <%= data[' + year + ']["Population"] %><br/><strong>Firearm Murders Per 100K People:</strong> <%= data[' + year + ']["Gun Murders Per 100K"] %></div>';
 
 	//set up map variable
 	var map = new Map({
@@ -147,12 +147,12 @@ function drawMap(year, dataObject) {
         	popupTemplate: _.template(newTemplate)
       },
 		fills: { //ultimately include all fills to be used, then just reference whichever ones you want in above calculations
-			'LEV1': '#c7a7e8',
-			'LEV2': '#ae87d6',
-			'LEV3': '#9364c2',
-			'LEV4': '#7847ab',
-			'LEV5': '#612f95',
-			'LEV6': '#4c1a80',
+			'LEV1': '#EDF8FB',
+			'LEV2': '#BFD3E6',
+			'LEV3': '#9EBCDA',
+			'LEV4': '#8C96C6',
+			'LEV5': '#8856A7',
+			'LEV6': '#810F7C',
 			defaultFill: '#EFEFEF'
 		},
 		data: JSON_data

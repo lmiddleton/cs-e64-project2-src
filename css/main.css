@@ -14,7 +14,6 @@ svg {
 }
 
 #control-panel {
-	background-color: yellow;
 	float: left;
 }
 
@@ -24,6 +23,34 @@ svg {
 	height: 20px;
 	margin-bottom: 3px;
 	width: 30px;
+}
+
+#color-key1 {
+	background-color: #EDF8FB;
+}
+
+#color-key2 {
+	background-color: #BFD3E6;
+}
+
+#color-key3 {
+	background-color: #9EBCDA;
+}
+
+#color-key4 {
+	background-color: #8C96C6;
+}
+
+#color-key5 {
+	background-color: #8856A7;
+}
+
+#color-key6 {
+	background-color: #810F7C;
+}
+
+#color-key-no-data {
+	background-color: #efefef;
 }
 
 .key-text {
