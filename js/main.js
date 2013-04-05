@@ -94,38 +94,19 @@ function parseCsv(filepath) {
 */
 
 /*re-renders the map for the selected year*/
-function drawMap(year, dataObject, newTemplate) {
+function drawMap(year, dataObject) {
 	//clear map div so map is not duplicated
 	$("#map1").empty();
 
-	console.log(year);
-	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Handguns"]) { %><hr/>  Total Handguns: <%= data[' + year + ']["Handguns"] %> <% } %></div>';
-
-	var map = new Map({
-		scope: 'usa',
-		el: $('#map1'),
-      	geography_config: { 
-        	highlightBorderColor: '#FFFF00',
-        	highlightOnHover: true,
-        	popupTemplate: _.template(newTemplate)
-      },
-		fills: {
-			'LEV1': '#c7a7e8',
-			'LEV2': '#ae87d6',
-			'LEV3': '#9364c2',
-			'LEV4': '#7847ab',
-			'LEV5': '#612f95',
-			'LEV6': '#4c1a80',
-			defaultFill: '#EFEFEF'
-		},
-		data: JSON_data
-	});
-
+	//do all necessary calculations of data here - may need to factor this out if multiple fill schemas? - may need to do these calulations in python and put them in the JSON object if we want to reference them in the tooltip - maybe can just modify the data object variable as they are calculated!
 	for(state in dataObject) {
 		if (!dataObject.hasOwnProperty(state)){
 			continue;
 		}
 		var gunMurdersPer100K = gunMurdersPer(dataObject, state, year, 100000);
+		//stick the new figure in the JSON object
+		dataObject[state][year]["Gun Murders Per 100K"] = gunMurdersPer100K;
+
 		console.log(gunMurdersPer100K);
 		if((gunMurdersPer100K >= 0) && (gunMurdersPer100K < 1)){
 			//one color
@@ -153,12 +134,36 @@ function drawMap(year, dataObject, newTemplate) {
 		}
 	}
 
+	//set up popup tmeplate
+	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Handguns"]) { %><hr/>  Total Handguns: <%= data[' + year + ']["Handguns"] %> <% } %><br/>Gun Murders Per 100K: <%= data[' + year + ']["Gun Murders Per 100K"] %></div>';
+
+	//set up map variable
+	var map = new Map({
+		scope: 'usa',
+		el: $('#map1'),
+      	geography_config: { 
+        	highlightBorderColor: '#FFFF00',
+        	highlightOnHover: true,
+        	popupTemplate: _.template(newTemplate)
+      },
+		fills: { //ultimately include all fills to be used, then just reference whichever ones you want in above calculations
+			'LEV1': '#c7a7e8',
+			'LEV2': '#ae87d6',
+			'LEV3': '#9364c2',
+			'LEV4': '#7847ab',
+			'LEV5': '#612f95',
+			'LEV6': '#4c1a80',
+			defaultFill: '#EFEFEF'
+		},
+		data: JSON_data
+	});
+
+	//render the map
 	map.render();
-	console.log("rendered!");
 }
 
 function setKey() {
-	
+
 }
 
 /*year dropdown handler*/
