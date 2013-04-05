@@ -94,12 +94,12 @@ function parseCsv(filepath) {
 */
 
 /*re-renders the map for the selected year*/
-function drawMap(year, dataObject) {
+function drawMap(year, dataObject, newTemplate) {
 	//clear map div so map is not duplicated
 	$("#map1").empty();
 
 	console.log(year);
-	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data["2006"]["Handguns"]) { %><hr/>  Total Handguns: <%= data["2006"]["Handguns"] %> <% } %></div>';
+	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Handguns"]) { %><hr/>  Total Handguns: <%= data[' + year + ']["Handguns"] %> <% } %></div>';
 
 	var map = new Map({
 		scope: 'usa',
@@ -161,7 +161,7 @@ window.onload = function() {
 
 	drawMap("2006", JSON_data);
 
-	newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data["2007"]["Handguns"]) { %><hr/>  Total Handguns: <%= data["2007"]["Handguns"] %> <% } %></div>';
+	//newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data["2007"]["Handguns"]) { %><hr/>  Total Handguns: <%= data["2007"]["Handguns"] %> <% } %></div>';
 
 	initYearSelect();
 
