@@ -110,8 +110,12 @@ function drawMap(year, dataObject, newTemplate) {
         	popupTemplate: _.template(newTemplate)
       },
 		fills: {
-			'TEST1': '#000000',
-			'TEST2': '#FFFFFF',
+			'LEV1': '#c7a7e8',
+			'LEV2': '#ae87d6',
+			'LEV3': '#9364c2',
+			'LEV4': '#7847ab',
+			'LEV5': '#612f95',
+			'LEV6': '#4c1a80',
 			defaultFill: '#EFEFEF'
 		},
 		data: JSON_data
@@ -121,20 +125,40 @@ function drawMap(year, dataObject, newTemplate) {
 		if (!dataObject.hasOwnProperty(state)){
 			continue;
 		}
-		var totalMurders = dataObject[state][year]["Total murders1"];
-		//console.log(totalMurders);
-		if(totalMurders >= 40){
+		var gunMurdersPer100K = gunMurdersPer(dataObject, state, year, 100000);
+		console.log(gunMurdersPer100K);
+		if((gunMurdersPer100K >= 0) && (gunMurdersPer100K < 1)){
 			//one color
-			dataObject[state]["fillKey"] = "TEST1";
+			dataObject[state]["fillKey"] = "LEV1";
 		}
-		else {
+		else if((gunMurdersPer100K >= 1) && (gunMurdersPer100K < 2)){
 			//another color
-			dataObject[state]["fillKey"] = "TEST2";
+			dataObject[state]["fillKey"] = "LEV2";
+		}
+		else if((gunMurdersPer100K >= 2) && (gunMurdersPer100K < 3)){
+			//another color
+			dataObject[state]["fillKey"] = "LEV3";
+		}
+		else if((gunMurdersPer100K >= 3) && (gunMurdersPer100K < 4)){
+			//another color
+			dataObject[state]["fillKey"] = "LEV4";
+		}
+		else if((gunMurdersPer100K >= 4) && (gunMurdersPer100K < 5)){
+			//another color
+			dataObject[state]["fillKey"] = "LEV5";
+		}
+		else if(gunMurdersPer100K >= 5){
+			//another color
+			dataObject[state]["fillKey"] = "LEV6";
 		}
 	}
 
 	map.render();
 	console.log("rendered!");
+}
+
+function setKey() {
+	
 }
 
 /*year dropdown handler*/
@@ -149,37 +173,35 @@ function initYearSelect() {
 	});
 }
 
+/*returns # of gun murders per given # of ppl in a given year for a given state*/
+function gunMurdersPer(dataObject, state, year, per) {
+	var pop = dataObject[state][year]["Population"];
+	console.log(pop);
+	var totalGunMurders = dataObject[state][year]["Total firearms"];
+	console.log(totalGunMurders);
+	var gunMurdersPer = (per * totalGunMurders)/pop;
+	console.log("gunmurdersper: " + gunMurdersPer);
+	return gunMurdersPer;
+}
+
 /********************************/
 
 window.onload = function() {
 	//init map 1
-	
+	drawMap("2006", JSON_data);
+
+	//init year filter
+	initYearSelect();
 
 	//how to access data in JSON object
 	var test = JSON_data["AK"]["2006"]["Handguns"];
 	console.log(test);
 
-	drawMap("2006", JSON_data);
-
-	//newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data["2007"]["Handguns"]) { %><hr/>  Total Handguns: <%= data["2007"]["Handguns"] %> <% } %></div>';
-
-	initYearSelect();
-
 	//to then modify the object (aka change the fill)
 	//JSON_data["AK"]["fillKey"] = "TEST1";
 	//console.log(JSON_data);
 
-	//to change the popupTemplate (ex. for a different year)
-	
-	//map.render;
 
-
-	//map.options.geography_config.popupTemplate.template = newTemplate;
-	//console.log(map.options.geography_config.popupTemplate.template);
-	//map.render();
-	//console.log(template);
-
-	
 
 	//parseCsv("/data/raw/fbi_murder_by_state_by_weapon_table20/2006_fbi_murder_by_state_by_weapon_cleaned.csv");
 	//map.options.data = byState2006;
