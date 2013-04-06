@@ -1,6 +1,11 @@
 /*Project 2 styles*/
 
+body{
+	font-family: Arial;
+}
+
 svg {
+	cursor: pointer;
 }
 
 #description {
@@ -19,6 +24,7 @@ svg {
 
 .color-key {
 	background-color: grey;
+	border: solid 1px #d7d7d7;
 	display: inline-block;
 	height: 20px;
 	margin-bottom: 3px;
@@ -54,5 +60,5 @@ svg {
 }
 
 .key-text {
-	display: inline-block;
+	line-height: 20px;
 }

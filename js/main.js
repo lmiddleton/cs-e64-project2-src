@@ -94,7 +94,7 @@ function parseCsv(filepath) {
 */
 
 /*re-renders the map for the selected year*/
-function drawMap(year, dataObject) {
+function drawMap(year, gunType, dataObject) {
 	//clear map div so map is not duplicated
 	$("#map1").empty();
 
@@ -103,7 +103,7 @@ function drawMap(year, dataObject) {
 		if (!dataObject.hasOwnProperty(state)){
 			continue;
 		}
-		var gunMurdersPer100K = gunMurdersPer(dataObject, state, year, 100000);
+		var gunMurdersPer100K = gunMurdersPer(dataObject, state, year, gunType, 100000);
 		//stick the new figure in the JSON object
 		dataObject[state][year]["Gun Murders Per 100K"] = gunMurdersPer100K;
 
@@ -135,13 +135,14 @@ function drawMap(year, dataObject) {
 	}
 
 	//set up popup tmeplate
-	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Total murders1"]) { %><hr/>  Total Murders: <%= data[' + year + ']["Total murders1"] %> <% } %><br/>Total Firearm Murders: <%= data[' + year + ']["Total firearms"] %><br/>Population: <%= data[' + year + ']["Population"] %><br/><strong>Firearm Murders Per 100K People:</strong> <%= data[' + year + ']["Gun Murders Per 100K"] %></div>';
+	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Total murders1"]) { %><hr/>  Total Homicides: <%= data[' + year + ']["Total murders1"] %> <% } %><br/>Total Firearm Homicides: <%= data[' + year + ']["Total firearms"] %><br/>Population: <%= data[' + year + ']["Population"] %><br/><strong>Firearm Homicides Per 100K People:</strong> <%= data[' + year + ']["Gun Murders Per 100K"] %></div>';
 
 	//set up map variable
 	var map = new Map({
 		scope: 'usa',
 		el: $('#map1'),
       	geography_config: { 
+        	borderColor: '#d7d7d7',
         	highlightBorderColor: '#FFFF00',
         	highlightOnHover: true,
         	popupTemplate: _.template(newTemplate)
@@ -160,6 +161,10 @@ function drawMap(year, dataObject) {
 
 	//render the map
 	map.render();
+
+	//update globals
+	yearShown = year;
+	gunTypeShown = gunType;
 }
 
 function setKey() {
@@ -172,31 +177,63 @@ function initYearSelect() {
 		//find which year was selected
 		var year = this.value;
 		//redraw the map based on that year
-		drawMap(year, JSON_data);
+		drawMap(year, gunTypeShown, JSON_data);
+	});
+}
 
-		alert(year);
+/*gun type dropdown handler*/
+function initGunTypeSelect() {
+	$("#gun-type").change(function() {
+		//find which was selected
+		var gunType = this.value;
+		//redraw map
+		drawMap(yearShown, gunType, JSON_data);
 	});
 }
 
 /*returns # of gun murders per given # of ppl in a given year for a given state*/
-function gunMurdersPer(dataObject, state, year, per) {
+function gunMurdersPer(dataObject, state, year, gunType, per) {
+	//figure out which gun type to use
+	var gunTypeData = "";
+	if(gunType == "all"){
+		gunTypeData = "Total firearms";
+	}
+	else if(gunType == "handguns"){
+		gunTypeData = "Handguns";
+	}
+	else if(gunType == "rifles"){
+		gunTypeData = "Rifles";
+	}
+	else if(gunType == "shotguns"){
+		gunTypeData = "Shotguns";
+	}
+	else if(gunType == "unknown") {
+		gunTypeData = "Firearms (type unknown)";
+	}
+
 	var pop = dataObject[state][year]["Population"];
-	console.log(pop);
-	var totalGunMurders = dataObject[state][year]["Total firearms"];
-	console.log(totalGunMurders);
+	//console.log(pop);
+	var totalGunMurders = dataObject[state][year][gunTypeData];
+	console.log(gunTypeData);
+	//console.log(totalGunMurders);
 	var gunMurdersPer = (per * totalGunMurders)/pop;
-	console.log("gunmurdersper: " + gunMurdersPer);
+	//console.log("gunmurdersper: " + gunMurdersPer);
 	return gunMurdersPer;
 }
 
 /********************************/
 
+//init global variables
+var gunTypeShown = "all";
+var yearShown = "2006";
+
 window.onload = function() {
 	//init map 1
-	drawMap("2006", JSON_data);
+	drawMap(yearShown, gunTypeShown, JSON_data);
 
-	//init year filter
+	//init filters
 	initYearSelect();
+	initGunTypeSelect();
 
 	//how to access data in JSON object
 	var test = JSON_data["AK"]["2006"]["Handguns"];

@@ -17,7 +17,7 @@
 
 <body>
 	<div id="description">
-		Number of firearm homicides relative to population in the US 2006-2011 by state. Filter by year and age of victim. Tooltip will show state name, current year selected, state population for that year, number of homicides in that state in that year, breakdown of victim ages in that state in that year (if an age is selected). Changing a filter on the right will trigger a redraw of the map for that specific data.
+		Number of firearm homicides relative to population in the US 2006-2011 by state. Filter by year and age of victim. Tooltip will show state name, current year selected, state population for that year, number of homicides in that state in that year, breakdown of victim ages in that state in that year (if an age is selected). Changing a filter on the right will trigger a redraw of the map for that specific data. Clicking a state will render a small bar/line chart showing data for that state over time (homicides per 100k for whatever filters are up?). Then implement brushing on this graph?
 	</div>
 
 	<div id="map1"></div>
@@ -32,6 +32,15 @@
 			<option>2011</option>
 		</select>
 		<br />
+		<select id="gun-type">
+			<option value="all">All Firearms</option>
+			<option value="handguns">Handguns</option>
+			<option value="rifles">Rifles</option>
+			<option value="shotguns">Shotguns</option>
+			<option value="unknown">Firearms (type unknown)</option>
+		</select>
+		<br />
+		<!--
 		<select id="age">
 			<option>Age</option>
 			<option>Infant (under 1 year)</option>
@@ -42,18 +51,21 @@
 			<option>17-19 years</option>
 			<option>etc.</option>
 		</select>
+		-->
 		<div id="key">
-			<div class="color-key" id="color-key1"></div><span class="key-text">Category 1</span>
+			<span><strong>Homicides per 100K People:</strong></span>
 			<br />
-			<div class="color-key" id="color-key2"></div><span class="key-text">Category 2</span>
+			<div class="color-key" id="color-key1"></div><span class="key-text">0-1</span>
 			<br />
-			<div class="color-key" id="color-key3"></div><span class="key-text">Category 3</span>
+			<div class="color-key" id="color-key2"></div><span class="key-text">1-2</span>
 			<br />
-			<div class="color-key" id="color-key4"></div><span class="key-text">Category 4</span>
+			<div class="color-key" id="color-key3"></div><span class="key-text">2-3</span>
 			<br />
-			<div class="color-key" id="color-key5"></div><span class="key-text">Category 5</span>
+			<div class="color-key" id="color-key4"></div><span class="key-text">3-4</span>
 			<br />
-			<div class="color-key" id="color-key6"></div><span class="key-text">Category 6</span>
+			<div class="color-key" id="color-key5"></div><span class="key-text">4-5</span>
+			<br />
+			<div class="color-key" id="color-key6"></div><span class="key-text">5+</span>
 			<br />
 			<div class="color-key" id="color-key-no-data"></div><span class="key-text">No Data</span>
 		</div>
