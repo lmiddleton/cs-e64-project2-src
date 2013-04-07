@@ -54,7 +54,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "4.0",
             "Knives or cutting instruments": "4.0",
             "Other weapons": "4.0",
-            "Population": "Alaska",
+            "Population": "710231",
             "Rifles": "5.0",
             "Shotguns": "1.0",
             "Total firearms": "19.0",
@@ -66,14 +66,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "2.0",
             "Knives or\ncutting\ninstruments": "6.0",
             "Other\nweapons": "5.0",
-            "Population": "710231",
+            "Population": "714046",
             "Rifles": "0.0",
             "Shotguns": "3.0",
             "Total\nfirearms": "16.0",
             "Total\nmurders1": "29.0"
-        },
-        "2012": {
-            "Population": "714046"
         },
         "Name": "Alaska"
     },
@@ -132,16 +129,13 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "17.0",
             "Knives or cutting instruments": "23.0",
             "Other weapons": "24.0",
-            "Population": "Alabama",
+            "Population": "4779745",
             "Rifles": "0.0",
             "Shotguns": "23.0",
             "Total firearms": "135.0",
             "Total murders1": "199.0"
         },
         "2011": {
-            "Population": "4779745"
-        },
-        "2012": {
             "Population": "4784762"
         },
         "Name": "Alabama"
@@ -201,7 +195,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "4.0",
             "Knives or cutting instruments": "12.0",
             "Other weapons": "21.0",
-            "Population": "Arkansas",
+            "Population": "2915919",
             "Rifles": "7.0",
             "Shotguns": "4.0",
             "Total firearms": "93.0",
@@ -213,14 +207,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "4.0",
             "Knives or\ncutting\ninstruments": "22.0",
             "Other\nweapons": "17.0",
-            "Population": "2915919",
+            "Population": "2922750",
             "Rifles": "4.0",
             "Shotguns": "6.0",
             "Total\nfirearms": "110.0",
             "Total\nmurders1": "153.0"
-        },
-        "2012": {
-            "Population": "2922750"
         },
         "Name": "Arkansas"
     },
@@ -279,7 +270,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "7.0",
             "Knives or cutting instruments": "51.0",
             "Other weapons": "62.0",
-            "Population": "Arizona",
+            "Population": "6392015",
             "Rifles": "14.0",
             "Shotguns": "10.0",
             "Total firearms": "232.0",
@@ -291,14 +282,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "9.0",
             "Knives or\ncutting\ninstruments": "49.0",
             "Other\nweapons": "59.0",
-            "Population": "6392015",
+            "Population": "6410810",
             "Rifles": "14.0",
             "Shotguns": "9.0",
             "Total\nfirearms": "222.0",
             "Total\nmurders1": "339.0"
-        },
-        "2012": {
-            "Population": "6410810"
         },
         "Name": "Arizona"
     },
@@ -357,7 +345,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "103.0",
             "Knives or cutting instruments": "250.0",
             "Other weapons": "201.0",
-            "Population": "California",
+            "Population": "37253956",
             "Rifles": "59.0",
             "Shotguns": "44.0",
             "Total firearms": "1257.0",
@@ -369,14 +357,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "101.0",
             "Knives or\ncutting\ninstruments": "261.0",
             "Other\nweapons": "208.0",
-            "Population": "37253956",
+            "Population": "37334410",
             "Rifles": "45.0",
             "Shotguns": "50.0",
             "Total\nfirearms": "1220.0",
             "Total\nmurders1": "1790.0"
-        },
-        "2012": {
-            "Population": "37334410"
         },
         "Name": "California"
     },
@@ -435,7 +420,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "11.0",
             "Knives or cutting instruments": "20.0",
             "Other weapons": "21.0",
-            "Population": "Colorado",
+            "Population": "5029196",
             "Rifles": "0.0",
             "Shotguns": "4.0",
             "Total firearms": "65.0",
@@ -447,14 +432,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "21.0",
             "Knives or\ncutting\ninstruments": "22.0",
             "Other\nweapons": "31.0",
-            "Population": "5029196",
+            "Population": "5048472",
             "Rifles": "3.0",
             "Shotguns": "5.0",
             "Total\nfirearms": "73.0",
             "Total\nmurders1": "147.0"
-        },
-        "2012": {
-            "Population": "5048472"
         },
         "Name": "Colorado"
     },
@@ -513,7 +495,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "6.0",
             "Knives or cutting instruments": "20.0",
             "Other weapons": "8.0",
-            "Population": "Connecticut",
+            "Population": "3574097",
             "Rifles": "0.0",
             "Shotguns": "1.0",
             "Total firearms": "97.0",
@@ -525,14 +507,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "6.0",
             "Knives or\ncutting\ninstruments": "18.0",
             "Other\nweapons": "10.0",
-            "Population": "3574097",
+            "Population": "3576616",
             "Rifles": "1.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "94.0",
             "Total\nmurders1": "128.0"
-        },
-        "2012": {
-            "Population": "3576616"
         },
         "Name": "Connecticut"
     },
@@ -591,7 +570,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "2.0",
             "Knives or cutting instruments": "8.0",
             "Other weapons": "0.0",
-            "Population": "Delaware",
+            "Population": "897934",
             "Rifles": "0.0",
             "Shotguns": "2.0",
             "Total firearms": "38.0",
@@ -603,14 +582,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "3.0",
             "Knives or\ncutting\ninstruments": "8.0",
             "Other\nweapons": "2.0",
-            "Population": "897934",
+            "Population": "899824",
             "Rifles": "0.0",
             "Shotguns": "3.0",
             "Total\nfirearms": "28.0",
             "Total\nmurders1": "41.0"
-        },
-        "2012": {
-            "Population": "899824"
         },
         "Name": "Delaware"
     },
@@ -628,12 +604,9 @@ var JSON_data = {
             "Population": "18537969"
         },
         "2010": {
-            "Population": "Florida"
-        },
-        "2011": {
             "Population": "18802690"
         },
-        "2012": {
+        "2011": {
             "Population": "18845967"
         },
         "Name": "Florida"
@@ -693,7 +666,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "2.0",
             "Knives or cutting instruments": "64.0",
             "Other weapons": "85.0",
-            "Population": "Georgia",
+            "Population": "9687663",
             "Rifles": "19.0",
             "Shotguns": "21.0",
             "Total firearms": "376.0",
@@ -705,14 +678,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "8.0",
             "Knives or\ncutting\ninstruments": "61.0",
             "Other\nweapons": "83.0",
-            "Population": "9687663",
+            "Population": "9714748",
             "Rifles": "16.0",
             "Shotguns": "16.0",
             "Total\nfirearms": "370.0",
             "Total\nmurders1": "522.0"
-        },
-        "2012": {
-            "Population": "9714748"
         },
         "Name": "Georgia"
     },
@@ -771,7 +741,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "6.0",
             "Knives or cutting instruments": "6.0",
             "Other weapons": "5.0",
-            "Population": "Hawaii",
+            "Population": "1360301",
             "Rifles": "0.0",
             "Shotguns": "0.0",
             "Total firearms": "7.0",
@@ -783,14 +753,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "3.0",
             "Knives or\ncutting\ninstruments": "2.0",
             "Other\nweapons": "1.0",
-            "Population": "1360301",
+            "Population": "1364274",
             "Rifles": "1.0",
             "Shotguns": "0.0",
             "Total\nfirearms": "1.0",
             "Total\nmurders1": "7.0"
-        },
-        "2012": {
-            "Population": "1364274"
         },
         "Name": "Hawaii"
     },
@@ -849,7 +816,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "4.0",
             "Knives or cutting instruments": "4.0",
             "Other weapons": "9.0",
-            "Population": "Iowa",
+            "Population": "3046857",
             "Rifles": "1.0",
             "Shotguns": "4.0",
             "Total firearms": "21.0",
@@ -861,14 +828,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "5.0",
             "Knives or\ncutting\ninstruments": "10.0",
             "Other\nweapons": "10.0",
-            "Population": "3046857",
+            "Population": "3050321",
             "Rifles": "0.0",
             "Shotguns": "2.0",
             "Total\nfirearms": "19.0",
             "Total\nmurders1": "44.0"
-        },
-        "2012": {
-            "Population": "3050321"
         },
         "Name": "Iowa"
     },
@@ -927,7 +891,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "3.0",
             "Knives or cutting instruments": "4.0",
             "Other weapons": "2.0",
-            "Population": "Idaho",
+            "Population": "1567652",
             "Rifles": "0.0",
             "Shotguns": "0.0",
             "Total firearms": "12.0",
@@ -939,14 +903,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "3.0",
             "Knives or\ncutting\ninstruments": "4.0",
             "Other\nweapons": "8.0",
-            "Population": "1567652",
+            "Population": "1570784",
             "Rifles": "1.0",
             "Shotguns": "0.0",
             "Total\nfirearms": "17.0",
             "Total\nmurders1": "32.0"
-        },
-        "2012": {
-            "Population": "1570784"
         },
         "Name": "Idaho"
     },
@@ -1005,7 +966,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "16.0",
             "Knives or cutting instruments": "30.0",
             "Other weapons": "43.0",
-            "Population": "Illinois",
+            "Population": "12830632",
             "Rifles": "3.0",
             "Shotguns": "1.0",
             "Total firearms": "364.0",
@@ -1017,14 +978,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "17.0",
             "Knives or\ncutting\ninstruments": "29.0",
             "Other\nweapons": "29.0",
-            "Population": "12830632",
+            "Population": "12840459",
             "Rifles": "1.0",
             "Shotguns": "5.0",
             "Total\nfirearms": "377.0",
             "Total\nmurders1": "452.0"
-        },
-        "2012": {
-            "Population": "12840459"
         },
         "Name": "Illinois"
     },
@@ -1083,7 +1041,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "12.0",
             "Knives or cutting instruments": "19.0",
             "Other weapons": "25.0",
-            "Population": "Indiana",
+            "Population": "6483800",
             "Rifles": "11.0",
             "Shotguns": "7.0",
             "Total firearms": "142.0",
@@ -1095,14 +1053,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "22.0",
             "Knives or\ncutting\ninstruments": "36.0",
             "Other\nweapons": "43.0",
-            "Population": "6483800",
+            "Population": "6489856",
             "Rifles": "9.0",
             "Shotguns": "12.0",
             "Total\nfirearms": "183.0",
             "Total\nmurders1": "284.0"
-        },
-        "2012": {
-            "Population": "6489856"
         },
         "Name": "Indiana"
     },
@@ -1161,7 +1116,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "6.0",
             "Knives or cutting instruments": "13.0",
             "Other weapons": "18.0",
-            "Population": "Kansas",
+            "Population": "2853116",
             "Rifles": "4.0",
             "Shotguns": "1.0",
             "Total firearms": "63.0",
@@ -1173,14 +1128,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "10.0",
             "Knives or\ncutting\ninstruments": "11.0",
             "Other\nweapons": "16.0",
-            "Population": "2853116",
+            "Population": "2858837",
             "Rifles": "3.0",
             "Shotguns": "5.0",
             "Total\nfirearms": "73.0",
             "Total\nmurders1": "110.0"
-        },
-        "2012": {
-            "Population": "2858837"
         },
         "Name": "Kansas"
     },
@@ -1239,7 +1191,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "20.0",
             "Knives or cutting instruments": "19.0",
             "Other weapons": "25.0",
-            "Population": "Kentucky",
+            "Population": "4339357",
             "Rifles": "6.0",
             "Shotguns": "16.0",
             "Total firearms": "116.0",
@@ -1251,14 +1203,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "13.0",
             "Knives or\ncutting\ninstruments": "13.0",
             "Other\nweapons": "24.0",
-            "Population": "4339357",
+            "Population": "4346655",
             "Rifles": "6.0",
             "Shotguns": "5.0",
             "Total\nfirearms": "100.0",
             "Total\nmurders1": "150.0"
-        },
-        "2012": {
-            "Population": "4346655"
         },
         "Name": "Kentucky"
     },
@@ -1317,7 +1266,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "13.0",
             "Knives or cutting instruments": "42.0",
             "Other weapons": "31.0",
-            "Population": "Louisiana",
+            "Population": "4533372",
             "Rifles": "19.0",
             "Shotguns": "11.0",
             "Total firearms": "351.0",
@@ -1329,14 +1278,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "26.0",
             "Knives or\ncutting\ninstruments": "28.0",
             "Other\nweapons": "29.0",
-            "Population": "4533372",
+            "Population": "4544125",
             "Rifles": "10.0",
             "Shotguns": "8.0",
             "Total\nfirearms": "402.0",
             "Total\nmurders1": "485.0"
-        },
-        "2012": {
-            "Population": "4544125"
         },
         "Name": "Louisiana"
     },
@@ -1395,7 +1341,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "10.0",
             "Knives or cutting instruments": "50.0",
             "Other weapons": "31.0",
-            "Population": "Massachusetts",
+            "Population": "6547629",
             "Rifles": "0.0",
             "Shotguns": "1.0",
             "Total firearms": "118.0",
@@ -1407,14 +1353,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "9.0",
             "Knives or\ncutting\ninstruments": "30.0",
             "Other\nweapons": "22.0",
-            "Population": "6547629",
+            "Population": "6563259",
             "Rifles": "0.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "122.0",
             "Total\nmurders1": "183.0"
-        },
-        "2012": {
-            "Population": "6563259"
         },
         "Name": "Massachusetts"
     },
@@ -1473,7 +1416,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "19.0",
             "Knives or cutting instruments": "59.0",
             "Other weapons": "53.0",
-            "Population": "Maryland",
+            "Population": "5773552",
             "Rifles": "3.0",
             "Shotguns": "12.0",
             "Total firearms": "293.0",
@@ -1485,14 +1428,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "17.0",
             "Knives or\ncutting\ninstruments": "75.0",
             "Other\nweapons": "34.0",
-            "Population": "5773552",
+            "Population": "5787998",
             "Rifles": "2.0",
             "Shotguns": "5.0",
             "Total\nfirearms": "272.0",
             "Total\nmurders1": "398.0"
-        },
-        "2012": {
-            "Population": "5787998"
         },
         "Name": "Maryland"
     },
@@ -1551,7 +1491,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "6.0",
             "Knives or cutting instruments": "6.0",
             "Other weapons": "1.0",
-            "Population": "Maine",
+            "Population": "1328361",
             "Rifles": "2.0",
             "Shotguns": "1.0",
             "Total firearms": "11.0",
@@ -1563,14 +1503,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "2.0",
             "Knives or\ncutting\ninstruments": "4.0",
             "Other\nweapons": "7.0",
-            "Population": "1328361",
+            "Population": "1327585",
             "Rifles": "1.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "12.0",
             "Total\nmurders1": "25.0"
-        },
-        "2012": {
-            "Population": "1327585"
         },
         "Name": "Maine"
     },
@@ -1629,7 +1566,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "31.0",
             "Knives or cutting instruments": "43.0",
             "Other weapons": "71.0",
-            "Population": "Michigan",
+            "Population": "9883635",
             "Rifles": "25.0",
             "Shotguns": "14.0",
             "Total firearms": "413.0",
@@ -1641,14 +1578,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "31.0",
             "Knives or\ncutting\ninstruments": "43.0",
             "Other\nweapons": "89.0",
-            "Population": "9883635",
+            "Population": "9877670",
             "Rifles": "29.0",
             "Shotguns": "15.0",
             "Total\nfirearms": "450.0",
             "Total\nmurders1": "613.0"
-        },
-        "2012": {
-            "Population": "9877670"
         },
         "Name": "Michigan"
     },
@@ -1707,7 +1641,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "8.0",
             "Knives or cutting instruments": "14.0",
             "Other weapons": "16.0",
-            "Population": "Minnesota",
+            "Population": "5303925",
             "Rifles": "2.0",
             "Shotguns": "8.0",
             "Total firearms": "53.0",
@@ -1719,14 +1653,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "3.0",
             "Knives or\ncutting\ninstruments": "12.0",
             "Other\nweapons": "12.0",
-            "Population": "5303925",
+            "Population": "5310737",
             "Rifles": "3.0",
             "Shotguns": "3.0",
             "Total\nfirearms": "43.0",
             "Total\nmurders1": "70.0"
-        },
-        "2012": {
-            "Population": "5310737"
         },
         "Name": "Minnesota"
     },
@@ -1785,7 +1716,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "14.0",
             "Knives or cutting instruments": "35.0",
             "Other weapons": "49.0",
-            "Population": "Missouri",
+            "Population": "5988924",
             "Rifles": "26.0",
             "Shotguns": "4.0",
             "Total firearms": "321.0",
@@ -1797,14 +1728,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "18.0",
             "Knives or\ncutting\ninstruments": "28.0",
             "Other\nweapons": "42.0",
-            "Population": "5988924",
+            "Population": "5996092",
             "Rifles": "13.0",
             "Shotguns": "9.0",
             "Total\nfirearms": "276.0",
             "Total\nmurders1": "364.0"
-        },
-        "2012": {
-            "Population": "5996092"
         },
         "Name": "Missouri"
     },
@@ -1863,7 +1791,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "5.0",
             "Knives or cutting instruments": "21.0",
             "Other weapons": "19.0",
-            "Population": "Mississippi",
+            "Population": "2967299",
             "Rifles": "3.0",
             "Shotguns": "12.0",
             "Total firearms": "120.0",
@@ -1875,14 +1803,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "9.0",
             "Knives or\ncutting\ninstruments": "26.0",
             "Other\nweapons": "14.0",
-            "Population": "2967299",
+            "Population": "2969137",
             "Rifles": "6.0",
             "Shotguns": "4.0",
             "Total\nfirearms": "138.0",
             "Total\nmurders1": "187.0"
-        },
-        "2012": {
-            "Population": "2969137"
         },
         "Name": "Mississippi"
     },
@@ -1941,7 +1866,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "1.0",
             "Knives or cutting instruments": "3.0",
             "Other weapons": "5.0",
-            "Population": "Montana",
+            "Population": "989417",
             "Rifles": "2.0",
             "Shotguns": "4.0",
             "Total firearms": "12.0",
@@ -1953,14 +1878,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "2.0",
             "Knives or\ncutting\ninstruments": "4.0",
             "Other\nweapons": "5.0",
-            "Population": "989417",
+            "Population": "990735",
             "Rifles": "3.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "7.0",
             "Total\nmurders1": "18.0"
-        },
-        "2012": {
-            "Population": "990735"
         },
         "Name": "Montana"
     },
@@ -2019,7 +1941,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "31.0",
             "Knives or cutting instruments": "56.0",
             "Other weapons": "72.0",
-            "Population": "North Carolina",
+            "Population": "9535471",
             "Rifles": "21.0",
             "Shotguns": "25.0",
             "Total firearms": "286.0",
@@ -2031,14 +1953,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "37.0",
             "Knives or\ncutting\ninstruments": "60.0",
             "Other\nweapons": "57.0",
-            "Population": "9535471",
+            "Population": "9559048",
             "Rifles": "26.0",
             "Shotguns": "19.0",
             "Total\nfirearms": "335.0",
             "Total\nmurders1": "489.0"
-        },
-        "2012": {
-            "Population": "9559048"
         },
         "Name": "North Carolina"
     },
@@ -2097,7 +2016,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "1.0",
             "Knives or cutting instruments": "0.0",
             "Other weapons": "4.0",
-            "Population": "North Dakota",
+            "Population": "672591",
             "Rifles": "0.0",
             "Shotguns": "1.0",
             "Total firearms": "4.0",
@@ -2109,14 +2028,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "2.0",
             "Knives or\ncutting\ninstruments": "4.0",
             "Other\nweapons": "0.0",
-            "Population": "672591",
+            "Population": "674363",
             "Rifles": "0.0",
             "Shotguns": "0.0",
             "Total\nfirearms": "6.0",
             "Total\nmurders1": "12.0"
-        },
-        "2012": {
-            "Population": "674363"
         },
         "Name": "North Dakota"
     },
@@ -2175,7 +2091,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "6.0",
             "Knives or cutting instruments": "8.0",
             "Other weapons": "5.0",
-            "Population": "Nebraska",
+            "Population": "1826341",
             "Rifles": "1.0",
             "Shotguns": "2.0",
             "Total firearms": "32.0",
@@ -2187,14 +2103,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "7.0",
             "Knives or\ncutting\ninstruments": "7.0",
             "Other\nweapons": "9.0",
-            "Population": "1826341",
+            "Population": "1829696",
             "Rifles": "2.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "42.0",
             "Total\nmurders1": "65.0"
-        },
-        "2012": {
-            "Population": "1829696"
         },
         "Name": "Nebraska"
     },
@@ -2253,7 +2166,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "0.0",
             "Knives or cutting instruments": "5.0",
             "Other weapons": "3.0",
-            "Population": "New Hampshire",
+            "Population": "1316469",
             "Rifles": "0.0",
             "Shotguns": "2.0",
             "Total firearms": "5.0",
@@ -2265,14 +2178,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "0.0",
             "Knives or\ncutting\ninstruments": "4.0",
             "Other\nweapons": "6.0",
-            "Population": "1316469",
+            "Population": "1316843",
             "Rifles": "2.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "6.0",
             "Total\nmurders1": "16.0"
-        },
-        "2012": {
-            "Population": "1316843"
         },
         "Name": "New Hampshire"
     },
@@ -2331,7 +2241,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "28.0",
             "Knives or cutting instruments": "50.0",
             "Other weapons": "39.0",
-            "Population": "New Jersey",
+            "Population": "8791898",
             "Rifles": "7.0",
             "Shotguns": "2.0",
             "Total firearms": "246.0",
@@ -2343,14 +2253,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "18.0",
             "Knives or\ncutting\ninstruments": "51.0",
             "Other\nweapons": "41.0",
-            "Population": "8791898",
+            "Population": "8803388",
             "Rifles": "1.0",
             "Shotguns": "5.0",
             "Total\nfirearms": "269.0",
             "Total\nmurders1": "379.0"
-        },
-        "2012": {
-            "Population": "8803388"
         },
         "Name": "New Jersey"
     },
@@ -2409,7 +2316,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "7.0",
             "Knives or cutting instruments": "29.0",
             "Other weapons": "15.0",
-            "Population": "New Mexico",
+            "Population": "2059180",
             "Rifles": "6.0",
             "Shotguns": "2.0",
             "Total firearms": "67.0",
@@ -2421,14 +2328,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "8.0",
             "Knives or\ncutting\ninstruments": "21.0",
             "Other\nweapons": "32.0",
-            "Population": "2059180",
+            "Population": "2064767",
             "Rifles": "2.0",
             "Shotguns": "2.0",
             "Total\nfirearms": "60.0",
             "Total\nmurders1": "121.0"
-        },
-        "2012": {
-            "Population": "2064767"
         },
         "Name": "New Mexico"
     },
@@ -2487,7 +2391,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "18.0",
             "Knives or cutting instruments": "22.0",
             "Other weapons": "34.0",
-            "Population": "Nevada",
+            "Population": "2700552",
             "Rifles": "5.0",
             "Shotguns": "6.0",
             "Total firearms": "84.0",
@@ -2499,14 +2403,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "9.0",
             "Knives or\ncutting\ninstruments": "20.0",
             "Other\nweapons": "25.0",
-            "Population": "2700552",
+            "Population": "2703758",
             "Rifles": "2.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "75.0",
             "Total\nmurders1": "129.0"
-        },
-        "2012": {
-            "Population": "2703758"
         },
         "Name": "Nevada"
     },
@@ -2565,7 +2466,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "22.0",
             "Knives or cutting instruments": "173.0",
             "Other weapons": "148.0",
-            "Population": "New York",
+            "Population": "19378104",
             "Rifles": "6.0",
             "Shotguns": "12.0",
             "Total firearms": "517.0",
@@ -2577,14 +2478,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "26.0",
             "Knives or\ncutting\ninstruments": "160.0",
             "Other\nweapons": "143.0",
-            "Population": "19378104",
+            "Population": "19399242",
             "Rifles": "5.0",
             "Shotguns": "16.0",
             "Total\nfirearms": "445.0",
             "Total\nmurders1": "774.0"
-        },
-        "2012": {
-            "Population": "19399242"
         },
         "Name": "New York"
     },
@@ -2643,7 +2541,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "17.0",
             "Knives or cutting instruments": "40.0",
             "Other weapons": "93.0",
-            "Population": "Ohio",
+            "Population": "11536502",
             "Rifles": "7.0",
             "Shotguns": "2.0",
             "Total firearms": "310.0",
@@ -2655,14 +2553,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "20.0",
             "Knives or\ncutting\ninstruments": "44.0",
             "Other\nweapons": "80.0",
-            "Population": "11536502",
+            "Population": "11538290",
             "Rifles": "8.0",
             "Shotguns": "13.0",
             "Total\nfirearms": "344.0",
             "Total\nmurders1": "488.0"
-        },
-        "2012": {
-            "Population": "11538290"
         },
         "Name": "Ohio"
     },
@@ -2721,7 +2616,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "21.0",
             "Knives or cutting instruments": "24.0",
             "Other weapons": "32.0",
-            "Population": "Oklahoma",
+            "Population": "3751354",
             "Rifles": "8.0",
             "Shotguns": "7.0",
             "Total firearms": "111.0",
@@ -2733,14 +2628,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "26.0",
             "Knives or\ncutting\ninstruments": "26.0",
             "Other\nweapons": "21.0",
-            "Population": "3751354",
+            "Population": "3759482",
             "Rifles": "8.0",
             "Shotguns": "9.0",
             "Total\nfirearms": "131.0",
             "Total\nmurders1": "204.0"
-        },
-        "2012": {
-            "Population": "3759482"
         },
         "Name": "Oklahoma"
     },
@@ -2799,7 +2691,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "9.0",
             "Knives or cutting instruments": "16.0",
             "Other weapons": "17.0",
-            "Population": "Oregon",
+            "Population": "3831073",
             "Rifles": "1.0",
             "Shotguns": "2.0",
             "Total firearms": "36.0",
@@ -2811,14 +2703,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "5.0",
             "Knives or\ncutting\ninstruments": "22.0",
             "Other\nweapons": "10.0",
-            "Population": "3831073",
+            "Population": "3838212",
             "Rifles": "1.0",
             "Shotguns": "2.0",
             "Total\nfirearms": "40.0",
             "Total\nmurders1": "77.0"
-        },
-        "2012": {
-            "Population": "3838212"
         },
         "Name": "Oregon"
     },
@@ -2877,7 +2766,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "28.0",
             "Knives or cutting instruments": "67.0",
             "Other weapons": "94.0",
-            "Population": "Pennsylvania",
+            "Population": "12702379",
             "Rifles": "8.0",
             "Shotguns": "11.0",
             "Total firearms": "457.0",
@@ -2889,14 +2778,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "27.0",
             "Knives or\ncutting\ninstruments": "73.0",
             "Other\nweapons": "66.0",
-            "Population": "12702379",
+            "Population": "12711308",
             "Rifles": "8.0",
             "Shotguns": "19.0",
             "Total\nfirearms": "470.0",
             "Total\nmurders1": "636.0"
-        },
-        "2012": {
-            "Population": "12711308"
         },
         "Name": "Pennsylvania"
     },
@@ -2955,7 +2841,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "2.0",
             "Knives or cutting instruments": "5.0",
             "Other weapons": "6.0",
-            "Population": "Rhode Island",
+            "Population": "1052567",
             "Rifles": "1.0",
             "Shotguns": "1.0",
             "Total firearms": "16.0",
@@ -2967,14 +2853,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "0.0",
             "Knives or\ncutting\ninstruments": "5.0",
             "Other\nweapons": "4.0",
-            "Population": "1052567",
+            "Population": "1052769",
             "Rifles": "0.0",
             "Shotguns": "0.0",
             "Total\nfirearms": "5.0",
             "Total\nmurders1": "14.0"
-        },
-        "2012": {
-            "Population": "1052769"
         },
         "Name": "Rhode Island"
     },
@@ -3033,7 +2916,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "17.0",
             "Knives or cutting instruments": "22.0",
             "Other weapons": "34.0",
-            "Population": "South Carolina",
+            "Population": "4625364",
             "Rifles": "8.0",
             "Shotguns": "7.0",
             "Total firearms": "207.0",
@@ -3045,14 +2928,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "18.0",
             "Knives or\ncutting\ninstruments": "38.0",
             "Other\nweapons": "40.0",
-            "Population": "4625364",
+            "Population": "4635835",
             "Rifles": "10.0",
             "Shotguns": "12.0",
             "Total\nfirearms": "223.0",
             "Total\nmurders1": "319.0"
-        },
-        "2012": {
-            "Population": "4635835"
         },
         "Name": "South Carolina"
     },
@@ -3111,7 +2991,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "0.0",
             "Knives or cutting instruments": "2.0",
             "Other weapons": "4.0",
-            "Population": "South Dakota",
+            "Population": "814180",
             "Rifles": "0.0",
             "Shotguns": "1.0",
             "Total firearms": "8.0",
@@ -3123,14 +3003,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "3.0",
             "Knives or\ncutting\ninstruments": "4.0",
             "Other\nweapons": "3.0",
-            "Population": "814180",
+            "Population": "816223",
             "Rifles": "1.0",
             "Shotguns": "0.0",
             "Total\nfirearms": "5.0",
             "Total\nmurders1": "15.0"
-        },
-        "2012": {
-            "Population": "816223"
         },
         "Name": "South Dakota"
     },
@@ -3189,7 +3066,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "19.0",
             "Knives or cutting instruments": "35.0",
             "Other weapons": "83.0",
-            "Population": "Tennessee",
+            "Population": "6346113",
             "Rifles": "12.0",
             "Shotguns": "11.0",
             "Total firearms": "219.0",
@@ -3201,14 +3078,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "16.0",
             "Knives or\ncutting\ninstruments": "51.0",
             "Other\nweapons": "62.0",
-            "Population": "6346113",
+            "Population": "6356673",
             "Rifles": "7.0",
             "Shotguns": "13.0",
             "Total\nfirearms": "244.0",
             "Total\nmurders1": "373.0"
-        },
-        "2012": {
-            "Population": "6356673"
         },
         "Name": "Tennessee"
     },
@@ -3267,7 +3141,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "109.0",
             "Knives or cutting instruments": "202.0",
             "Other weapons": "130.0",
-            "Population": "Texas",
+            "Population": "25145561",
             "Rifles": "34.0",
             "Shotguns": "48.0",
             "Total firearms": "805.0",
@@ -3279,14 +3153,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "81.0",
             "Knives or\ncutting\ninstruments": "175.0",
             "Other\nweapons": "134.0",
-            "Population": "25145561",
+            "Population": "25242683",
             "Rifles": "37.0",
             "Shotguns": "48.0",
             "Total\nfirearms": "699.0",
             "Total\nmurders1": "1089.0"
-        },
-        "2012": {
-            "Population": "25242683"
         },
         "Name": "Texas"
     },
@@ -3345,7 +3216,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "11.0",
             "Knives or cutting instruments": "7.0",
             "Other weapons": "12.0",
-            "Population": "Utah",
+            "Population": "2763885",
             "Rifles": "0.0",
             "Shotguns": "1.0",
             "Total firearms": "22.0",
@@ -3357,14 +3228,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "11.0",
             "Knives or\ncutting\ninstruments": "5.0",
             "Other\nweapons": "9.0",
-            "Population": "2763885",
+            "Population": "2775093",
             "Rifles": "4.0",
             "Shotguns": "1.0",
             "Total\nfirearms": "26.0",
             "Total\nmurders1": "51.0"
-        },
-        "2012": {
-            "Population": "2775093"
         },
         "Name": "Utah"
     },
@@ -3423,7 +3291,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "22.0",
             "Knives or cutting instruments": "47.0",
             "Other weapons": "50.0",
-            "Population": "Virginia",
+            "Population": "8001031",
             "Rifles": "9.0",
             "Shotguns": "12.0",
             "Total firearms": "250.0",
@@ -3435,14 +3303,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "21.0",
             "Knives or\ncutting\ninstruments": "33.0",
             "Other\nweapons": "41.0",
-            "Population": "8001031",
+            "Population": "8025105",
             "Rifles": "10.0",
             "Shotguns": "15.0",
             "Total\nfirearms": "208.0",
             "Total\nmurders1": "303.0"
-        },
-        "2012": {
-            "Population": "8025105"
         },
         "Name": "Virginia"
     },
@@ -3501,7 +3366,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "2.0",
             "Knives or cutting instruments": "1.0",
             "Other weapons": "2.0",
-            "Population": "Vermont",
+            "Population": "625741",
             "Rifles": "1.0",
             "Shotguns": "0.0",
             "Total firearms": "2.0",
@@ -3513,14 +3378,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "0.0",
             "Knives or\ncutting\ninstruments": "2.0",
             "Other\nweapons": "2.0",
-            "Population": "625741",
+            "Population": "625916",
             "Rifles": "0.0",
             "Shotguns": "0.0",
             "Total\nfirearms": "4.0",
             "Total\nmurders1": "8.0"
-        },
-        "2012": {
-            "Population": "625916"
         },
         "Name": "Vermont"
     },
@@ -3579,7 +3441,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "12.0",
             "Knives or cutting instruments": "24.0",
             "Other weapons": "22.0",
-            "Population": "Washington",
+            "Population": "6724543",
             "Rifles": "4.0",
             "Shotguns": "2.0",
             "Total firearms": "93.0",
@@ -3591,14 +3453,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "17.0",
             "Knives or\ncutting\ninstruments": "29.0",
             "Other\nweapons": "36.0",
-            "Population": "6724543",
+            "Population": "6743636",
             "Rifles": "1.0",
             "Shotguns": "3.0",
             "Total\nfirearms": "79.0",
             "Total\nmurders1": "161.0"
-        },
-        "2012": {
-            "Population": "6743636"
         },
         "Name": "Washington"
     },
@@ -3657,7 +3516,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "19.0",
             "Knives or cutting instruments": "13.0",
             "Other weapons": "22.0",
-            "Population": "Wisconsin",
+            "Population": "5686986",
             "Rifles": "5.0",
             "Shotguns": "6.0",
             "Total firearms": "97.0",
@@ -3669,14 +3528,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "21.0",
             "Knives or\ncutting\ninstruments": "21.0",
             "Other\nweapons": "13.0",
-            "Population": "5686986",
+            "Population": "5689591",
             "Rifles": "7.0",
             "Shotguns": "3.0",
             "Total\nfirearms": "80.0",
             "Total\nmurders1": "135.0"
-        },
-        "2012": {
-            "Population": "5689591"
         },
         "Name": "Wisconsin"
     },
@@ -3735,7 +3591,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "8.0",
             "Knives or cutting instruments": "11.0",
             "Other weapons": "9.0",
-            "Population": "West Virginia",
+            "Population": "1852999",
             "Rifles": "0.0",
             "Shotguns": "4.0",
             "Total firearms": "27.0",
@@ -3747,14 +3603,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "7.0",
             "Knives or\ncutting\ninstruments": "11.0",
             "Other\nweapons": "13.0",
-            "Population": "1852999",
+            "Population": "1854019",
             "Rifles": "10.0",
             "Shotguns": "3.0",
             "Total\nfirearms": "43.0",
             "Total\nmurders1": "74.0"
-        },
-        "2012": {
-            "Population": "1854019"
         },
         "Name": "West Virginia"
     },
@@ -3813,7 +3666,7 @@ var JSON_data = {
             "Hands, fists, feet, etc.2": "1.0",
             "Knives or cutting instruments": "1.0",
             "Other weapons": "1.0",
-            "Population": "Wyoming",
+            "Population": "563626",
             "Rifles": "2.0",
             "Shotguns": "0.0",
             "Total firearms": "5.0",
@@ -3825,14 +3678,11 @@ var JSON_data = {
             "Hands, fists,\nfeet, etc.2": "3.0",
             "Knives or\ncutting\ninstruments": "0.0",
             "Other\nweapons": "1.0",
-            "Population": "563626",
+            "Population": "564367",
             "Rifles": "0.0",
             "Shotguns": "0.0",
             "Total\nfirearms": "11.0",
             "Total\nmurders1": "15.0"
-        },
-        "2012": {
-            "Population": "564367"
         },
         "Name": "Wyoming"
     }

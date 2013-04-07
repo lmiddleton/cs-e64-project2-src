@@ -117,9 +117,9 @@ for row in reader:
         print row[column]
         for state in data:
             if row[column] == data[state]["Name"]:   
-                for count in range(0,3):
+                for count in range(0,2):
                     data[state][str(year + count)] = {}
-                    data[state][str(year + count)]["Population"] = row[column + count]
+                    data[state][str(year + count)]["Population"] = row[column + count + 1]
                     
 
 
