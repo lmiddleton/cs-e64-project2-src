@@ -1,3 +1,13 @@
+html, body, div, form, fieldset, input, textarea, li, ul, hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 .axis path,
 .axis line {
     fill: none;
@@ -15,53 +25,22 @@
     stroke-width: 2px;
 }
 
-
-html, body, div, h1, form, fieldset, input, textarea, li, ul, hr, select {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-html {
-    height: 100%;
-}
-body {
-    background: white;
-    height: 100%;
-}
-body, a, input, select {
-    color: #333;
-    font-family: Arial, sans-serif;
-    font-size: 0.8em;
-    line-height: 1.3;
-}
 .container{
-    width: 600px;
+    width: 400px;
     /*min-height: 100%;*/
     padding: 5px;
-    background-color: rgba(255,255,255, 0.75);
-    margin-left: 10px;
+    padding-left: 0px;
     margin-right: auto;
 }
 
 #bars {
-    position: absolute;
-    left: 500px;
-    top: 670px;
-    
 }
+
 #bartitle {
-    position: absolute;
-    left: 500px;
-    top: 650px;
     font-weight: bold;
 }
+
 #linetitle {
-    position: absolute;
-    left: 30px;
-    top: 630px;
+    background-color: white;
     font-weight: bold;
 }

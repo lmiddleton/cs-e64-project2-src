@@ -135,9 +135,9 @@ var state_data_JSON = {
             "Total firearms": "135.0",
             "Total murders1": "199.0"
         },
-        //"2011": {
-        //    "Population": "4784762"
-        //},
+        "2011": {
+            "Population": "4784762"
+        },
         "Name": "Alabama"
     },
     "AR": {

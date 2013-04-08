@@ -1,21 +1,44 @@
 /*Project 2 styles*/
 
 body{
+	color: #333333;
 	font-family: Arial;
+	font-size: 13px;
+	min-width: 1200px;
 }
 
 svg {
 	/*cursor: pointer;*/
 }
 
+h1 {
+	margin: 0px;
+}
+
+h2 {
+	font-size: 14px;
+	margin: 0px;
+}
+
+h3 {
+	color: #666666;
+	font-size: 12px;
+	font-weight: normal;
+}
+
 #description {
-	background-color: pink;
+	padding: 10px;
 }
 
 #map1 {
 	float: left;
-	height: 600px;
-	width: 1000px;
+	height: 450px;
+	margin-bottom: 50px;
+	margin-top: 20px;
+	width: 900px;
+}
+
+#map1 svg {
 }
 
 #control-panel {
@@ -60,10 +83,16 @@ svg {
 }
 
 .key-text {
-	line-height: 20px;
+	display: inline-block;
+	line-height: 10px;
 }
 
 .active-state {
 	stroke: red !important;
 	fill: red !important;
+}
+
+.ul-basic {
+	margin: 0px;
+	list-style-type: none;
 }

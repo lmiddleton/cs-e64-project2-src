@@ -19,10 +19,14 @@
 
 <body>
 	<div id="description">
-		Number of firearm homicides relative to population in the US 2006-2011 by state. Filter by year and age of victim. Tooltip will show state name, current year selected, state population for that year, number of homicides in that state in that year, breakdown of victim ages in that state in that year (if an age is selected). Changing a filter on the right will trigger a redraw of the map for that specific data. Clicking a state will render a small bar/line chart showing data for that state over time (homicides per 100k for whatever filters are up?). Then implement brushing on this graph?
+		<h1>Firearm Homicides in the United States</h1>
+		<h2>by Josh McElfresh and Lauren Middleton</h2>
+		<h3>
+			Use the filters to see the rates of firearm homicide per hundred thousand people for the selected year and firearm type. Click a state to see it's firearm homicide data over time. Hover over the points for a breakdown of firearm types involved in homicides for that year. Data from FBI.gov and census.gov.
+		</h3>
 	</div>
 
-	<div id="map1"></div>
+	<div id="map1" style="margin-left: 30px;"></div>
 
 	<div id="control-panel">
 		<select id="year">
@@ -41,42 +45,54 @@
 			<option value="shotguns">Shotguns</option>
 			<option value="unknown">Firearms (type unknown)</option>
 		</select>
-		<br />
-		<!--
-		<select id="age">
-			<option>Age</option>
-			<option>Infant (under 1 year)</option>
-			<option>1-4 years</option>
-			<option>5-8 years</option>
-			<option>9-12 years</option>
-			<option>13-16 years</option>
-			<option>17-19 years</option>
-			<option>etc.</option>
-		</select>
-		-->
+		<br /><br />
+		
 		<div id="key">
-			<span><strong>Firearm Homicides per 100K People:</strong></span>
-			<br />
-			<div class="color-key" id="color-key1"></div><span class="key-text">0-1</span>
-			<br />
-			<div class="color-key" id="color-key2"></div><span class="key-text">1-2</span>
-			<br />
-			<div class="color-key" id="color-key3"></div><span class="key-text">2-3</span>
-			<br />
-			<div class="color-key" id="color-key4"></div><span class="key-text">3-4</span>
-			<br />
-			<div class="color-key" id="color-key5"></div><span class="key-text">4-5</span>
-			<br />
-			<div class="color-key" id="color-key6"></div><span class="key-text">5+</span>
-			<br />
-			<div class="color-key" id="color-key-no-data"></div><span class="key-text">No Data</span>
+			<span><strong>Firearm Homicides per 100K People</strong></span>
+			<br /><br />
+			<ul class="ul-basic">
+				<li>
+					<div class="color-key" id="color-key1"></div>
+					<span class="key-text">0-1</span>
+				</li>
+				<li>
+					<div class="color-key" id="color-key2"></div>
+					<span class="key-text">1-2</span>
+				</li>
+				<li>
+					<div class="color-key" id="color-key3"></div>
+					<span class="key-text">2-3</span>
+				</li>
+				<li>
+					<div class="color-key" id="color-key4"></div>
+					<span class="key-text">3-4</span>
+				</li>
+				<li>
+					<div class="color-key" id="color-key5"></div>
+					<span class="key-text">4-5</span>
+				</li>
+				<li>
+					<div class="color-key" id="color-key6"></div>
+					<span class="key-text">5+</span>
+				</li>
+				<li>
+					<div class="color-key" id="color-key-no-data"></div>
+					<span class="key-text">No Data</span>
+				</li>
+			</ul>
 		</div>
 	</div>
 
-	<div class="container">test</div>
-	<div id="bartitle"></div>
-	<div id="linetitle"></div>
-    <svg id="bars" width="500" height="200"></svg>
+	<div class="graph-parent" style="clear: both;">
+		<div style="float: left; margin-left: 40px;">	
+			<div id="linetitle"></div>
+			<div class="container"></div>
+		</div>
+		<div style="float: left; margin-left: 80px;">
+			<div id="bartitle"></div>
+    		<svg id="bars" width="500" height="200"></svg>
+    	</div>
+	</div>
 </body>
 
 </html>

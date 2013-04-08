@@ -9,9 +9,6 @@ function drawGraph(state) {
     var x = d3.time.scale().range([0, width]);
     var y = d3.scale.linear().range([height, 0]);
 
-    var xAxis = d3.svg.axis().scale(x).orient("bottom");
-    var yAxis = d3.svg.axis().scale(y).orient("left");
-
     var line = d3.svg.line()
         .x(function(d) { return x(d.x); })
         .y(function(d) { return y(d.y); });
@@ -32,10 +29,15 @@ function drawGraph(state) {
             //console.log(value["Total murders1"]);
             per100K = value["Total firearms"]*(100000.0/value["Population"]);
             //console.log("per100K:" + per100K);
-            data.push({"x":key,"y":per100K});
-            
+            if (!isNaN(per100K)) {
+                data.push({"x":key,"y":per100K});
+            }
+
         }
     });
+    
+    var xAxis = d3.svg.axis().scale(x).orient("bottom").ticks(data.length);
+    var yAxis = d3.svg.axis().scale(y).orient("left");
     
     data.forEach(function (d) {
         d.x = parseDate(d.x);

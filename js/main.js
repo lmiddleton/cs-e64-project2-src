@@ -108,8 +108,11 @@ function drawMap(year, gunType, dataObject) {
 		//stick the shortened figure in the JSON object for use in the tooltip
 		dataObject[state][year]["Gun Murders Per 100K"] = gunMurdersPer100Kshort;
 
-		console.log(gunMurdersPer100K);
-		if((gunMurdersPer100K >= 0) && (gunMurdersPer100K < 1)){
+		//console.log(gunMurdersPer100K);
+		if(state == "FL"){
+			dataObject[state]["fillKey"] = "NODATA";
+		}
+		else if((gunMurdersPer100K >= 0) && (gunMurdersPer100K < 1)){
 			//one color
 			dataObject[state]["fillKey"] = "LEV1";
 		}
@@ -155,6 +158,7 @@ function drawMap(year, gunType, dataObject) {
 			'LEV4': '#8C96C6',
 			'LEV5': '#8856A7',
 			'LEV6': '#810F7C',
+			'NODATA': '#EFEFEF',
 			defaultFill: '#EFEFEF'
 		},
 		data: state_data_JSON
@@ -189,16 +193,23 @@ function drawMap(year, gunType, dataObject) {
 
         //console.log($('path [style*=stroke:#FFFF00]')); //.css("stroke", "red");
         //$(this).addClass("active-state");
-        
-        console.log(data.geography.id);
-        $(".container").empty();
-        drawGraph(data.geography.id);
-        _YEAR = "2006";
-        _STATE = data.geography.id;
-		$("#linetitle").text(state_data_JSON[_STATE]["Name"] + " Firearm Homicides over Time");
-        $("#bartitle").text(state_data_JSON[_STATE]["Name"] + " Homicides by Firearm Type - " + yearShown);
-        $("#bars").empty();
-        drawBars(data.geography.id,yearShown);
+        if (data.geography.id == "FL") {
+		$(".container").empty();
+		$("#bars").empty();
+		$("#linetitle").text("No data for Florida");
+		$("#bartitle").empty();
+	}
+	else {
+		console.log(data.geography.id);
+		$(".container").empty();
+		drawGraph(data.geography.id);
+		//_YEAR = "2006";
+		_STATE = data.geography.id;
+		$("#linetitle").text(state_data_JSON[_STATE]["Name"] + " Firearm Homicides by Year");
+		$("#bartitle").text(state_data_JSON[_STATE]["Name"] + " Homicides by Firearm Type - " + yearShown);
+		$("#bars").empty();
+		drawBars(data.geography.id,yearShown);	
+	}
     });
 	
 	
