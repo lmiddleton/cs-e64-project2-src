@@ -5,7 +5,7 @@ body{
 }
 
 svg {
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 
 #description {
@@ -61,4 +61,9 @@ svg {
 
 .key-text {
 	line-height: 20px;
+}
+
+.active-state {
+	stroke: red !important;
+	fill: red !important;
 }

@@ -5,13 +5,15 @@
 	<title>Project 2</title>
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.9.2.custom.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/svg.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<!-- JS -->
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
 	<script type="text/javascript" src="js/d3.v3.js"></script>
 	<script type="text/javascript" src="js/datamaps-us-only.js"></script>
-	<script type="text/javascript" src="python/JSON_data.js"></script>
+	<script type="text/javascript" src="js/state_data_JSON.js"></script>
+	<script type="text/javascript" src="js/chart.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -53,7 +55,7 @@
 		</select>
 		-->
 		<div id="key">
-			<span><strong>Homicides per 100K People:</strong></span>
+			<span><strong>Firearm Homicides per 100K People:</strong></span>
 			<br />
 			<div class="color-key" id="color-key1"></div><span class="key-text">0-1</span>
 			<br />
@@ -70,6 +72,11 @@
 			<div class="color-key" id="color-key-no-data"></div><span class="key-text">No Data</span>
 		</div>
 	</div>
+
+	<div class="container">test</div>
+	<div id="bartitle"></div>
+	<div id="linetitle"></div>
+    <svg id="bars" width="500" height="200"></svg>
 </body>
 
 </html>

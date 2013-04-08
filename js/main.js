@@ -104,8 +104,9 @@ function drawMap(year, gunType, dataObject) {
 			continue;
 		}
 		var gunMurdersPer100K = gunMurdersPer(dataObject, state, year, gunType, 100000);
-		//stick the new figure in the JSON object
-		dataObject[state][year]["Gun Murders Per 100K"] = gunMurdersPer100K;
+		var gunMurdersPer100Kshort = gunMurdersPer100K.toFixed(2);
+		//stick the shortened figure in the JSON object for use in the tooltip
+		dataObject[state][year]["Gun Murders Per 100K"] = gunMurdersPer100Kshort;
 
 		console.log(gunMurdersPer100K);
 		if((gunMurdersPer100K >= 0) && (gunMurdersPer100K < 1)){
@@ -138,7 +139,7 @@ function drawMap(year, gunType, dataObject) {
 	var newTemplate = '<div class="hoverinfo"><strong><%= geography.properties.name %></strong> <% if (data[' + year + ']["Total murders1"]) { %><hr/>  Total Homicides: <%= data[' + year + ']["Total murders1"] %> <% } %><br/>Total Firearm Homicides: <%= data[' + year + ']["Total firearms"] %><br/>Population: <%= data[' + year + ']["Population"] %><br/><strong>Firearm Homicides Per 100K People:</strong> <%= data[' + year + ']["Gun Murders Per 100K"] %></div>';
 
 	//set up map variable
-	var map = new Map({
+	map = new Map({
 		scope: 'usa',
 		el: $('#map1'),
       	geography_config: { 
@@ -156,7 +157,7 @@ function drawMap(year, gunType, dataObject) {
 			'LEV6': '#810F7C',
 			defaultFill: '#EFEFEF'
 		},
-		data: JSON_data
+		data: state_data_JSON
 	});
 
 	//render the map
@@ -165,6 +166,42 @@ function drawMap(year, gunType, dataObject) {
 	//update globals
 	yearShown = year;
 	gunTypeShown = gunType;
+	
+	// Re-render the graph ever time a state is clicked
+    map.$el.bind("map-click", function(e, data) {
+        console.log(data.geography.id);
+        //change the border color of the clicked state
+        $('body').find('path').each(function() {
+        	if($(this).css("stroke-width") == "2px"){
+        		console.log("yellow stroke");
+        		$(this).css("stroke", "red");
+				$(this).css("fill", "red");
+				//var id = this.id;
+				//console.log(id);
+				//$(this).addClass("active-state");
+				$(this).mouseout(function() {
+					$(this).addClass("active-state");
+					console.log(this);
+				});
+        		//$(this).css("opacity")
+        	}
+        });
+
+        //console.log($('path [style*=stroke:#FFFF00]')); //.css("stroke", "red");
+        //$(this).addClass("active-state");
+        
+        console.log(data.geography.id);
+        $(".container").empty();
+        drawGraph(data.geography.id);
+        _YEAR = "2006";
+        _STATE = data.geography.id;
+		$("#linetitle").text(state_data_JSON[_STATE]["Name"] + " Firearm Homicides over Time");
+        $("#bartitle").text(state_data_JSON[_STATE]["Name"] + " Homicides by Firearm Type - " + yearShown);
+        $("#bars").empty();
+        drawBars(data.geography.id,yearShown);
+    });
+	
+	
 }
 
 function setKey() {
@@ -177,7 +214,7 @@ function initYearSelect() {
 		//find which year was selected
 		var year = this.value;
 		//redraw the map based on that year
-		drawMap(year, gunTypeShown, JSON_data);
+		drawMap(year, gunTypeShown, state_data_JSON);
 	});
 }
 
@@ -187,7 +224,7 @@ function initGunTypeSelect() {
 		//find which was selected
 		var gunType = this.value;
 		//redraw map
-		drawMap(yearShown, gunType, JSON_data);
+		drawMap(yearShown, gunType, state_data_JSON);
 	});
 }
 
@@ -224,24 +261,25 @@ function gunMurdersPer(dataObject, state, year, gunType, per) {
 /********************************/
 
 //init global variables
+var map;
 var gunTypeShown = "all";
 var yearShown = "2006";
 
 window.onload = function() {
 	//init map 1
-	drawMap(yearShown, gunTypeShown, JSON_data);
+	drawMap(yearShown, gunTypeShown, state_data_JSON);
 
 	//init filters
 	initYearSelect();
 	initGunTypeSelect();
 
 	//how to access data in JSON object
-	var test = JSON_data["AK"]["2006"]["Handguns"];
-	console.log(test);
+	//var test = state_data_JSON["AK"]["2006"]["Handguns"];
+	//console.log(test);
 
 	//to then modify the object (aka change the fill)
-	//JSON_data["AK"]["fillKey"] = "TEST1";
-	//console.log(JSON_data);
+	//state_data_JSON["AK"]["fillKey"] = "TEST1";
+	//console.log(state_data_JSON);
 
 
 
@@ -256,9 +294,11 @@ window.onload = function() {
 	//map.render();
 	
 
-	$('#map1').click(function(event){
-	  alert(event.target.id);
-	});
+	//$('#map1').click(function(event){
+	  //alert(event.target.id);
+	//});
+
+
 
 	//for testing
 	alert("javascript is working.");

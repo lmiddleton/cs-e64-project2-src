@@ -135,9 +135,9 @@ var state_data_JSON = {
             "Total firearms": "135.0",
             "Total murders1": "199.0"
         },
-        "2011": {
-            "Population": "4784762"
-        },
+        //"2011": {
+        //    "Population": "4784762"
+        //},
         "Name": "Alabama"
     },
     "AR": {
@@ -592,22 +592,76 @@ var state_data_JSON = {
     },
     "FL": {
         "2006": {
-            "Population": "18088505"
+            "Population": "18088505",
+            "Firearms (type unknown)": "0",
+            "Handguns": "0",
+            "Hands, fists, feet, etc.2": "0",
+            "Knives or cutting instruments": "0",
+            "Other weapons": "0",
+            "Rifles": "0",
+            "Shotguns": "0",
+            "Total firearms": "0",
+            "Total murders1": "0"
         },
         "2007": {
-            "Population": "18277888"
+            "Population": "18277888",
+            "Firearms (type unknown)": "0",
+            "Handguns": "0",
+            "Hands, fists, feet, etc.2": "0",
+            "Knives or cutting instruments": "0",
+            "Other weapons": "0",
+            "Rifles": "0",
+            "Shotguns": "0",
+            "Total firearms": "0",
+            "Total murders1": "0"
         },
         "2008": {
-            "Population": "18423878"
+            "Population": "18423878",
+            "Firearms (type unknown)": "0",
+            "Handguns": "0",
+            "Hands, fists, feet, etc.2": "0",
+            "Knives or cutting instruments": "0",
+            "Other weapons": "0",
+            "Rifles": "0",
+            "Shotguns": "0",
+            "Total firearms": "0",
+            "Total murders1": "0"
         },
         "2009": {
-            "Population": "18537969"
+            "Population": "18537969",
+            "Firearms (type unknown)": "0",
+            "Handguns": "0",
+            "Hands, fists, feet, etc.2": "0",
+            "Knives or cutting instruments": "0",
+            "Other weapons": "0",
+            "Rifles": "0",
+            "Shotguns": "0",
+            "Total firearms": "0",
+            "Total murders1": "0"
         },
         "2010": {
-            "Population": "18802690"
+            "Population": "18802690",
+            "Firearms (type unknown)": "0",
+            "Handguns": "0",
+            "Hands, fists, feet, etc.2": "0",
+            "Knives or cutting instruments": "0",
+            "Other weapons": "0",
+            "Rifles": "0",
+            "Shotguns": "0",
+            "Total firearms": "0",
+            "Total murders1": "0"
         },
         "2011": {
-            "Population": "18845967"
+            "Population": "18845967",
+            "Firearms (type unknown)": "0",
+            "Handguns": "0",
+            "Hands, fists, feet, etc.2": "0",
+            "Knives or cutting instruments": "0",
+            "Other weapons": "0",
+            "Rifles": "0",
+            "Shotguns": "0",
+            "Total firearms": "0",
+            "Total murders1": "0"
         },
         "Name": "Florida"
     },

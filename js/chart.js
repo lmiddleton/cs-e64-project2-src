@@ -1,7 +1,7 @@
 function drawGraph(state) {
 
     var margin = {top: 20, right: 50, bottom: 50, left: 50}, 
-        width = 500 - margin.left - margin.right,
+        width = 400 - margin.left - margin.right,
         height = 300 - margin.top - margin.bottom;
         
     var parseDate = d3.time.format("%Y").parse;
@@ -30,12 +30,13 @@ function drawGraph(state) {
         if (key != "Name") {
             //console.log(value["Population"]);
             //console.log(value["Total murders1"]);
-            per100K = value["Total murders1"]*(100000.0/value["Population"]);
+            per100K = value["Total firearms"]*(100000.0/value["Population"]);
             //console.log("per100K:" + per100K);
             data.push({"x":key,"y":per100K});
+            
         }
     });
-
+    
     data.forEach(function (d) {
         d.x = parseDate(d.x);
         //console.log(d.x);
@@ -59,7 +60,8 @@ function drawGraph(state) {
         .attr("y", 6)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Murders Per 100K");
+        .text("Firearm Homocides Per 100K")
+        .attr("font-family", "Open Sans");
 
     svg.append("path")
         .datum(data)
@@ -75,7 +77,7 @@ function drawGraph(state) {
             { return x(d.x); })
         .attr("cy", function(d) 
             { return y(d.y); })
-        .attr("r", 3);
+        .attr("r", 6);
 
     dots.on("mouseover", mouseover)
         .on("mouseout", mouseout);
@@ -85,8 +87,16 @@ function drawGraph(state) {
 function mouseover (d) {
      d3.select(this)
         .style("fill", "red")
-        .attr("r", 5);
-
+        .attr("r", 7);
+    
+    $("#bars").empty();
+    console.log(d.x.getFullYear());
+    //yearShown = d.x.getFullYear();
+    $("#bartitle").text(state_data_JSON[_STATE]["Name"] + " Firearm Homocides by Weapon - " + d.x.getFullYear());
+    drawBars(_STATE,d.x.getFullYear());
+    //$("#bars").empty();
+    //drawBars(data.geography.id,_YEAR);
+    /*
     var label = document.getElementById("container");
     var pTag = document.createElement("p");
     pTag.id = "label";
@@ -95,22 +105,22 @@ function mouseover (d) {
         "<b>Value: </b>" + d.y + "<br>";
 
     label.appendChild(pTag)
-
+    */
 };
 
 function mouseout (d) {
     d3.select(this)
         .style("fill", "black")
-        .attr("r", 3);
+        .attr("r", 6);
 
-    /* deletes legend */
+    /* 
     var label = document.getElementById("container");
 
     if (isInDocument(document.getElementById("label"))){
         label.removeChild(document.getElementById("label"));}
+    */
 };
 
- /* helper to check if element is in document */
 function isInDocument (el) {
     var html = document.body.parentNode;
     while (el) {
@@ -123,9 +133,31 @@ function isInDocument (el) {
     return false;
 };
 
-function drawBars(state) {
+function drawBars(state,year) {
     
+    var mydata = state_data_JSON[state][year];
     
+    data = []
+    //$.each(mydata, function(key, value) {
+
+        var total = mydata["Total firearms"];
+        var unknown = (mydata["Firearms (type unknown)"]/total)*100;
+        var hangun = (mydata["Handguns"]/total)*100;
+        //var melee = (mydata["Hands, fists, feet, etc.2"]/total)*100;
+        //var knives = (mydata["Knives or cutting instruments"]/total)*100;
+        var rifles = (mydata["Rifles"]/total)*100;
+        var shotguns = (mydata["Shotguns"]/total)*100;
+        //var other = (mydata["Other weapons"]/total)*100;
+
+        data.push({"label":"Unknown Type","score":unknown})
+        data.push({"label":"Handguns","score":hangun})
+        //data.push({"label":"Hands,feet,etc","score":melee})
+        //data.push({"label":"Blades","score":knives})
+        data.push({"label":"Rifles","score":rifles})
+        data.push({"label":"Shotguns","score":shotguns})
+        //data.push({"label":"Other","score":other})
+
+    //});
     
     var chart = d3.select("#bars");
     var width = chart.attr("width");
@@ -136,7 +168,7 @@ function drawBars(state) {
     
     var x = d3.scale.linear()
       .domain([0, 80]) // changed from [0, 5]
-      .range([0, w-130]);
+      .range([0, w-150]);
     
     var y = d3.scale.linear()
       .domain([0, 1])
@@ -144,13 +176,13 @@ function drawBars(state) {
     
     var color = d3.scale.linear()
       .domain([0, 20, 40, 60, 80]) // from 1, 2, 3, 4, 5
-      .range(["#99333e", "#cf633d", "#e89745", "#f7e7ab", "#61a179"]);
+      .range(["#FFB870", "#FF9933", "#FF3300", "#FF0000", "#CC0000"]);
     
     chart.selectAll("rect.data")
       .data(data)
       .enter()
       .append("rect")
-      .attr("x", function(d, i) { return 130; })
+      .attr("x", function(d, i) { return 150; })
       .attr("y", function(d, i) { return h*i + (height-(h*data.length))/(data.length+1)*(i+1); })
       .attr("width", 0)
       .attr("height", h)
@@ -173,10 +205,10 @@ function drawBars(state) {
       .text(function(d) { return d.label; })
       .attr("text-anchor", "end")
       .attr("x", 90)
-      .attr("y", function(d, i) { h*i + (height-(h*data.length))/(data.length+1)*(i+1) + h - 3; })
+      .attr("y", function(d, i) { return h*i + (height-(h*data.length))/(data.length+1)*(i+1) + h - 3; })
       .attr("fill", "#333")
       .attr("font-size", "12px")
-      .attr("font-family", "Open Sans")
+      .attr("font-family", "Arial")
       .attr("stroke-width", 0)
       .attr("data-label", function(d) { return d.label; })
       .attr("cursor", "pointer");
@@ -185,17 +217,17 @@ function drawBars(state) {
       .data(data)
       .enter()
       .append("text")
-      .text(function(d) { return parseFloat(d.score).toFixed(2); })
-      .attr("x", function(d) { return 100; })
+      .text(function(d) { return parseFloat(d.score).toFixed(1) + "%"; })
+      .attr("x", function(d) { return 100; }) 
       .attr("y", function(d, i) { return h*i + (height-(h*data.length))/(data.length+1)*(i+1) + h - 3; })
-      .attr("fill", "#AAA")
-      .attr("font-size", "10px")
-      .attr("font-family", "Open Sans")
+      .attr("fill", "#333")
+      .attr("font-size", "12px")
+      .attr("font-family", "Arial")
       .attr("stroke-width", 0)
       .attr("data-label", function(d) { return d.label; })
-      .attr("class", "score")
-      .style("cursor", "pointer");
-    
+      .attr("class", "score");
+      //.style("cursor", "pointer");
+    /*
     chart.selectAll("rect.cover")
       .data(data)
       .enter()
@@ -210,8 +242,8 @@ function drawBars(state) {
       .attr("fill", "#000")
       .style("cursor", "pointer")
       .style("opacity", 0)
-      .attr("class", "cover");
-    
+      .attr("class", "cover");*/
+    /*
     function update(data){
       chart.selectAll("rect.data")
         .data(data)
@@ -223,9 +255,8 @@ function drawBars(state) {
       chart.selectAll("text.score")
         .data(data)
         .text(function(d) { return parseFloat(d.score).toFixed(2); });
-    }   
+    }   */
 }
-
 
 
 
