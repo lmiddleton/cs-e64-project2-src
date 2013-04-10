@@ -1,0 +1,199 @@
+<!--
+John Mercer's brushing example for reference
+-->
+
+<!DOCTYPE html>
+<!-- saved from url=(0194)https://s3.amazonaws.com/piazza-attachments/hb6wzhqdlpvs9/hessxm24wzg1cf/hessxmes2hj1dx/sbe.html?AWSAccessKeyId=AKIAJKOQYKAYOBKKVTKQ&Expires=1365434650&Signature=R5AUNDnSINaZi0xWRGZ%2B6WtTtGc%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+
+ 
+    <!-- D3 Core Library -->
+     <script src="js/d3.v3.js"></script>
+<style>
+ 
+body {
+  font: 10px sans-serif;
+}
+/* This style is for the histogram rectangles */
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+  font-size: 5;
+}
+/* This style is for the text (frequeny count) on the histogram rectangles */
+.bar text {
+  fill: #fff;
+  font-size: 5;
+}
+/* This style is for the axes */
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/* This is the style for the brush and extent classes */
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .2;
+  shape-rendering: crispEdges;
+}
+
+</style></head> 
+
+
+<body> 
+
+<script>
+document.write("<br><br>");
+d3.select("body").append("div").
+       text("The Simplest Brushing Example on Earth ... Possibly In the Universe.")
+document.write("<br><br>");
+
+// The simplest dataset ever
+var values  = [];
+
+values.push( {  myvar: 1.9 });
+values.push( {  myvar: 1.5 });
+values.push( {  myvar: 0.9 });
+values.push( {  myvar: 1.1 });
+values.push( {  myvar: 0.1 });
+ 
+ // the dimension of the svg will be 200x200 so that the data space of (0,2) will nicely transform to the pixel space
+ var  width = 200 ,
+     height = 200  ;
+
+// the exten function returns an array of two values (min,max) of the original array
+// you have to use values.map to pull out the data from the myvar object within the original dataset
+var x_extent = d3.extent(values.map(function(d) { return d.myvar; }));
+// i use the ceiling and floor functions to get integer min/max for the x pixel space
+x_extent[0] = Math.floor(x_extent[0]); //x_extent[0] = 0 now
+x_extent[1]  = Math.ceil(x_extent[1]); //x_extent[1] = 2 now
+
+//yep, only two bins for this histogram
+var num_bins = 2;
+
+//this is the transformation function for input space to pixel space
+var x = d3.scale.linear()
+    //domain of input values of x
+    .domain(x_extent) 
+    //the range is the output range after translation to pixel space
+    .range([0, width]);
+
+//for creating an x-axis later
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .ticks(3);
+
+
+//data is an array of objects that contains the bins and values that fall in each bin
+//e.g. data[0] = [0.9,0.1]
+//https://github.com/mbostock/d3/wiki/Histogram-Layout
+var data = d3.layout.histogram()
+            .bins(x.ticks(num_bins))
+              (values.map(function(d) { return d.myvar; }));
+
+//https://github.com/mbostock/d3/wiki/Quantitative-Scales
+var y = d3.scale.linear()
+     //domain of input values of y
+    .domain([0, d3.max(data, function(d) { return d.y; })]) 
+    //note, d3.max(data, function(d) { return d.y; }) returns 3 (the max count in a bin)
+    //the range is the output range after translation to pixel space
+    .range([height, 0]);
+
+// specify the brush function
+var brush = d3.svg.brush()
+    .x(x) //i only need to spcify x because i want the brush to be the entire y-axis
+    //specify the brush events https://github.com/mbostock/d3/wiki/SVG-Controls
+    .on("brushstart", brushstart)
+    .on("brush", brushmove)
+    .on("brushend", brushend);
+
+//append the svg and set its width and height
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g");
+
+//create by groups (g's) to hold the bars
+var bar = svg.selectAll(".bar")
+    .data(data)
+  .enter().append("g")
+    .attr("class", "bar")
+    .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; }).call(brush);
+
+//for each bar, append a rectangle of 
+bar.append("rect")
+    .attr("x", 0) 
+    .attr("width", x(data[0].dx)-1) 
+    .attr("height", function(d) { return height - y(d.y); });
+
+
+//I have to append the brush AFTER the bins otherwise it would show up underneath the bins, duh (I did that at first)
+//context for the brush
+var context = svg.append("g");
+
+ //this is from the context + linking example
+context.append("g")
+    .attr("class", "x brush")
+    .call(brush)
+  .selectAll("rect")
+    .attr("height", height);
+
+// this is to append the count label on each bin
+var formatCount = d3.format(",.0f");
+bar.append("text")
+    .attr("dy", ".3em")
+    .attr("y", 6)
+    .attr("x", x(data[0].dx)/2) //put the label in the middle of the bar
+    .attr("text-anchor", "middle")
+    .text(function(d) { return formatCount(d.y); });
+
+var brushBar;
+
+  function brushstart(p) {
+    console.log("brush start."); 
+    // here you would typically (based on the other examples) clear the previously-active brush, if any.
+    //if (brushBar !== p) {
+    //  bar.call(brush.clear());
+    //  brushBar = p;
+   // }
+ 
+  }
+
+  // Highlight the selected circles.
+  function brushmove(p) {
+     //console.log("brush move.."); 
+  
+     var e = brush.extent();
+     //console.log("brush extent:");  
+     //console.log(e);
+     //returns [[x0,y0],[x1,y1]] 
+     //where [x0,y0] = lower bounds of extent
+     //and   [x1,y1] = upper bounds of extent
+     //console.log("x lb: " + e[0] + "  x ub: "+e[1]);
+
+     //the array of my original data, can make this more efficient so I don't have to load it every time brushmove executes!
+     var orig_data = values.map(function(d) { return d.myvar; });
+
+     var indices  = [];
+      for(var i = 0; i < orig_data.length; i++)
+      {
+        if (orig_data[i] >= e[0] && orig_data[i] <= e[1]){
+           //if the data is within the extent of the brush then output the index
+           console.log("Index:"+i);
+           indices.push(i);
+           //smile :-)
+        }
+      }
+  }
+
+  // If the brush is empty, select all circles.
+  function brushend(p) {
+    console.log("brush end...");
+  }
+
+</script><br><br>
+ 
+</body></html>

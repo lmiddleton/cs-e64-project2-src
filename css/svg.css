@@ -33,6 +33,10 @@ html, body, div, form, fieldset, input, textarea, li, ul, hr {
     margin-right: auto;
 }
 
+.container svg {
+	cursor: crosshair;
+}
+
 #bars {
 }
 
@@ -43,4 +47,20 @@ html, body, div, form, fieldset, input, textarea, li, ul, hr {
 #linetitle {
     background-color: white;
     font-weight: bold;
+}
+
+.extent {
+  fill: #000;
+  fill-opacity: .125;
+  stroke: #fff;
+}
+
+.background {
+    fill: yellow;
+    z-index: -1;
+}
+
+.dots {
+    position: relative;
+    z-index: 1000 !important;
 }
