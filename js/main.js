@@ -175,6 +175,6 @@ window.onload = function() {
 	initGunTypeSelect();
 
 	//for testing
-	alert("javascript is working.");
+	//alert("javascript is working.");
 
 }
